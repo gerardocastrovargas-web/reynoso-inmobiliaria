@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reynoso & Asociados | Asesoría Inmobiliaria en Mexicali</title>
+    <meta name="description" content="Encuentra la propiedad de tus sueños o vende tu inmueble con seguridad y confianza. Asesoría inmobiliaria profesional por Francisco Reynoso en Mexicali.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#1c3524',      /* Deep Forest Green */
+                            greenDark: '#132619',
+                            greenLight: '#264832',
+                            gold: '#c29b38',       /* Muted Ochre / Gold */
+                            goldHover: '#a8832a',
+                            goldLight: '#dfc578',
+                            cream: '#faf8f3',      /* Main Cream background */
+                            creamDark: '#f4f0e4',
+                            whitePure: '#ffffff',
+                            whatsapp: '#25D366'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    },
+                    boxShadow: {
+                        'luxury': '0 20px 40px -15px rgba(28, 53, 36, 0.12)',
+                        'card-hover': '0 25px 50px -12px rgba(194, 155, 56, 0.25)',
+                        'gold-glow': '0 0 25px rgba(194, 155, 56, 0.4)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom aesthetics & smooth transitions */
+        .glass-header {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .hero-gradient {
+            background: linear-gradient(90deg, rgba(250, 248, 243, 0.95) 0%, rgba(250, 248, 243, 0.75) 45%, rgba(250, 248, 243, 0.15) 100%);
+        }
+        @media (max-width: 768px) {
+            .hero-gradient {
+                background: linear-gradient(180deg, rgba(250, 248, 243, 0.95) 0%, rgba(250, 248, 243, 0.7) 100%);
+            }
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #c29b38 0%, #e6cb7a 50%, #a8832a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-gray-800 font-sans antialiased selection:bg-brand-gold selection:text-white flex flex-col min-h-screen">
+
+    <!-- ==========================================
+         CABECERA / NAVBAR
+    ========================================== -->
+    <header class="sticky top-0 z-40 glass-header border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-2.5 sm:py-3.5 min-h-[84px] sm:min-h-[96px]">
+                
+                <!-- Logo matching user reference image exactly -->
+                <a href="#inicio" class="flex items-center gap-3.5 group py-1">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center transition-transform group-hover:scale-105 shrink-0">
+                        <img src="logo_exact.svg" alt="Reynoso & Asociados Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <span class="font-serif font-extrabold text-xl sm:text-2xl tracking-wider text-brand-green leading-none group-hover:text-brand-gold transition-colors">
+                            REYNOSO
+                        </span>
+                        <span class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-brand-gold -mt-0.5">
+                            &amp; ASOCIADOS
+                        </span>
+                        <span class="text-[8px] sm:text-[10px] font-semibold tracking-[0.18em] text-gray-500 uppercase mt-0.5">
+                            ASESORÍA INMOBILIARIA
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-sm font-semibold text-gray-700 hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">Inicio</a>
+                    <a href="#propiedades" class="text-sm font-semibold text-gray-700 hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">Propiedades</a>
+                    <a href="#servicios" class="text-sm font-semibold text-gray-700 hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">Servicios</a>
+                    <a href="#nosotros" class="text-sm font-semibold text-gray-700 hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">Nosotros</a>
+                    <a href="#contacto" class="text-sm font-semibold text-gray-700 hover:text-brand-gold transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-brand-gold hover:after:w-full after:transition-all">Contacto</a>
+                </nav>
+
+                <!-- Header CTA Button & Mobile Toggle -->
+                <div class="flex items-center gap-4">
+                    <a href="#propiedades" class="hidden sm:inline-flex items-center justify-center px-6 py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow-md hover:bg-brand-goldHover hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5">
+                        Ver Propiedades
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-md text-gray-700 hover:text-brand-gold hover:bg-gray-100 focus:outline-none" aria-label="Abrir menú">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#inicio" class="block py-2 text-base font-semibold text-gray-800 hover:text-brand-gold border-b border-gray-100">Inicio</a>
+            <a href="#propiedades" class="block py-2 text-base font-semibold text-gray-800 hover:text-brand-gold border-b border-gray-100">Propiedades</a>
+            <a href="#servicios" class="block py-2 text-base font-semibold text-gray-800 hover:text-brand-gold border-b border-gray-100">Servicios</a>
+            <a href="#nosotros" class="block py-2 text-base font-semibold text-gray-800 hover:text-brand-gold border-b border-gray-100">Nosotros</a>
+            <a href="#contacto" class="block py-2 text-base font-semibold text-gray-800 hover:text-brand-gold">Contacto</a>
+            <a href="#propiedades" class="block w-full text-center mt-4 px-6 py-3 rounded-md bg-brand-gold text-white font-semibold text-base shadow-md hover:bg-brand-goldHover transition-all">
+                Ver Propiedades
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+
+        <!-- ==========================================
+             SECCIÓN HÉROE
+        ========================================== -->
+        <section id="inicio" class="relative min-h-[600px] lg:min-h-[720px] flex items-center overflow-hidden bg-brand-cream">
+            
+            <!-- Hero Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="hero_house_clean.jpg" alt="Casa Moderna Reynoso & Asociados" class="w-full h-full object-cover object-right md:object-center">
+                <!-- Overlay gradient for high contrast text reading -->
+                <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 w-full">
+                <div class="max-w-2xl">
+                    <!-- Gold Accent Tag -->
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/15 border border-brand-gold/40 text-brand-gold text-xs font-bold uppercase tracking-widest mb-6 backdrop-blur-sm">
+                        <i class="fa-solid fa-house-circle-check text-xs"></i>
+                        <span>Asesoría Inmobiliaria Profesional</span>
+                    </div>
+
+                    <!-- Main Headline matching Index.jpg exactly -->
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-brand-green leading-[1.15] tracking-tight font-serif mb-6">
+                        <span class="text-brand-gold block drop-shadow-sm">TU TERRENO</span>
+                        <span class="text-brand-green block">PUEDE CONVERTIRSE</span>
+                        <span class="text-brand-gold block drop-shadow-sm">EN TU HOGAR</span>
+                    </h1>
+
+                    <!-- Subtitle -->
+                    <p class="text-lg sm:text-xl text-gray-700 font-medium mb-8 max-w-lg leading-relaxed">
+                        Haz realidad el hogar que siempre soñaste.
+                    </p>
+
+                    <!-- CTA Button -->
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <a href="#propiedades" class="inline-flex items-center justify-center px-8 py-4 rounded-md bg-brand-gold text-white font-bold text-base tracking-wide shadow-lg hover:bg-brand-goldHover hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 group">
+                            <span>Explorar Listados</span>
+                            <i class="fa-solid fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="https://wa.me/526861622403" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center px-6 py-4 rounded-md bg-white/90 text-brand-green border border-brand-green/20 font-semibold text-base shadow-sm hover:bg-white hover:border-brand-gold transition-all duration-300">
+                            <i class="fa-brands fa-whatsapp text-brand-whatsapp text-xl mr-2"></i>
+                            <span>Consulta Directa</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECCIÓN NOSOTROS ("Conócenos")
+        ========================================== -->
+        <section id="nosotros" class="py-20 bg-brand-cream border-t border-b border-brand-gold/10 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white/60 backdrop-blur-md rounded-2xl p-8 sm:p-12 border border-brand-gold/20 shadow-luxury">
+                    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center">
+                        
+                        <!-- Agent Image -->
+                        <div class="md:col-span-4 flex justify-center">
+                            <div class="relative group">
+                                <div class="absolute -inset-2 bg-gradient-to-r from-brand-gold to-brand-green rounded-2xl blur-md opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                                <div class="relative w-56 h-64 sm:w-64 sm:h-72 lg:w-72 lg:h-80 rounded-xl overflow-hidden shadow-xl border-4 border-white bg-gray-100">
+                                    <img src="Frank.jpg" alt="Francisco Reynoso - Asesor Inmobiliario" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Agent Content -->
+                        <div class="md:col-span-8 flex flex-col justify-center space-y-4">
+                            <span class="text-brand-gold text-sm font-bold uppercase tracking-widest">
+                                Conócenos
+                            </span>
+                            <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-green">
+                                Reynoso & Asociados
+                            </h2>
+                            <div class="w-16 h-1 bg-brand-gold rounded-full"></div>
+                            
+                            <blockquote class="text-base sm:text-lg text-gray-700 leading-relaxed font-normal pt-2">
+                                "Hola, soy <strong class="text-brand-green font-semibold">Francisco Reynoso</strong>, asesor inmobiliario en Mexicali. Mi objetivo es ayudarte a encontrar la propiedad ideal o vender tu inmueble con seguridad y confianza. Te acompaño en cada paso del proceso para que tomes la mejor decisión."
+                            </blockquote>
+
+                            <div class="pt-4 flex flex-wrap items-center gap-6 text-xs sm:text-sm text-gray-600 font-semibold">
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                    <span>Mexicali, Baja California</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <i class="fa-solid fa-shield-halved text-brand-gold"></i>
+                                    <span>Asesoría Legal Garantizada</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECCIÓN DE ESTADÍSTICAS
+        ========================================== -->
+        <section class="py-16 bg-brand-cream border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+                    
+                    <!-- Stat 1 -->
+                    <div class="bg-white/80 rounded-xl p-6 text-center shadow-sm border border-brand-gold/15 hover:shadow-md hover:border-brand-gold transition-all duration-300 group">
+                        <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-briefcase text-xl"></i>
+                        </div>
+                        <div class="text-3xl sm:text-4xl font-extrabold font-serif text-brand-green mb-1">10+</div>
+                        <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-gray-600">AÑOS DE EXPERIENCIA</div>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="bg-white/80 rounded-xl p-6 text-center shadow-sm border border-brand-gold/15 hover:shadow-md hover:border-brand-gold transition-all duration-300 group">
+                        <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-handshake text-xl"></i>
+                        </div>
+                        <div class="text-3xl sm:text-4xl font-extrabold font-serif text-brand-green mb-1">500+</div>
+                        <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-gray-600">TRANSACCIONES EXITOSAS</div>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="bg-white/80 rounded-xl p-6 text-center shadow-sm border border-brand-gold/15 hover:shadow-md hover:border-brand-gold transition-all duration-300 group">
+                        <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-thumbs-up text-xl"></i>
+                        </div>
+                        <div class="text-3xl sm:text-4xl font-extrabold font-serif text-brand-green mb-1">98%</div>
+                        <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-gray-600">SATISFACCIÓN DEL CLIENTE</div>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div class="bg-white/80 rounded-xl p-6 text-center shadow-sm border border-brand-gold/15 hover:shadow-md hover:border-brand-gold transition-all duration-300 group">
+                        <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-brand-gold/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-colors duration-300">
+                            <i class="fa-solid fa-gavel text-xl"></i>
+                        </div>
+                        <div class="text-3xl sm:text-4xl font-extrabold font-serif text-brand-green mb-1">100%</div>
+                        <div class="text-xs sm:text-sm font-bold uppercase tracking-wider text-gray-600">SEGURIDAD LEGAL</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECCIÓN DE PROPIEDADES DESTACADAS (ACTUALIZADA)
+        ========================================== -->
+        <section id="propiedades" class="py-20 bg-brand-cream">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Section Title -->
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-green tracking-tight">
+                        Propiedades Destacadas
+                    </h2>
+                    <div class="w-20 h-1 bg-brand-gold mx-auto my-4 rounded-full"></div>
+                    <p class="text-gray-600 text-base sm:text-lg">
+                        Explora los exclusivos modelos residenciales de Samara Residencial Boutique en la Zona Dorada de Mexicali.
+                    </p>
+                </div>
+
+                <!-- Property Cards Grid (4 cards responsive layout) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                    
+                    <!-- Tarjeta 1: Modelo ALEXANDRA -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover hover:border-brand-gold/40 transition-all duration-300 flex flex-col group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                            <img src="card_alexandra.jpg" alt="Modelo ALEXANDRA - Casa de Una Planta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                                NUEVO
+                            </span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                    Modelo ALEXANDRA - Casa de Una Planta
+                                </h3>
+                                <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                    <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                    <span>Samara Residencial Boutique</span>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
+                                        <span>210 m²</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-bed text-brand-gold"></i>
+                                        <span>3 Recámaras</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                    $750,000 <span class="text-xs font-sans font-semibold text-gray-500">USD</span>
+                                </div>
+                            </div>
+
+                            <button onclick="openPropertyModal('Modelo ALEXANDRA - Casa de Una Planta', '$750,000 USD', '210 m²', 'Samara Residencial Boutique', 'card_alexandra.jpg', 'Amplia residencia de una planta con acabados de lujo, patio privado y diseño moderno pensado para la comodidad máxima de tu familia.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center">
+                                Ver Más
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Modelo Eliza -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover hover:border-brand-gold/40 transition-all duration-300 flex flex-col group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                            <img src="card_eliza.jpg" alt="Modelo Eliza - Totalmente Amueblado" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                                NUEVO
+                            </span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                    Modelo Eliza - Totalmente Amueblado
+                                </h3>
+                                <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                    <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                    <span>Samara Residencial Boutique</span>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
+                                        <span>195 m²</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-couch text-brand-gold"></i>
+                                        <span>Amueblada</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                    $820,000 <span class="text-xs font-sans font-semibold text-gray-500">USD</span>
+                                </div>
+                            </div>
+
+                            <button onclick="openPropertyModal('Modelo Eliza - Totalmente Amueblado', '$820,000 USD', '195 m²', 'Samara Residencial Boutique', 'card_eliza.jpg', 'Hermosa residencia totalmente amueblada y lista para habitar con mobiliario contemporáneo de alta gama e iluminación cálida ambiental.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center">
+                                Ver Más
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Residencia ISABELLA -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover hover:border-brand-gold/40 transition-all duration-300 flex flex-col group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                            <img src="card_isabella.jpg" alt="Residencia ISABELLA - Vista al Atardecer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                                NUEVO
+                            </span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                    Residencia ISABELLA - Vista al Atardecer
+                                </h3>
+                                <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                    <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                    <span>Samara Residencial Boutique</span>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
+                                        <span>280 m²</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-building text-brand-gold"></i>
+                                        <span>2 Plantas</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                    $910,000 <span class="text-xs font-sans font-semibold text-gray-500">USD</span>
+                                </div>
+                            </div>
+
+                            <button onclick="openPropertyModal('Residencia ISABELLA - Vista al Atardecer', '$910,000 USD', '280 m²', 'Samara Residencial Boutique', 'card_isabella.jpg', 'Espectacular residencia de dos plantas diseñada para conectar tu vida con el exterior, disfrutando los más bellos atardeceres en Mexicali.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center">
+                                Ver Más
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4: Acceso Premier Samara -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover hover:border-brand-gold/40 transition-all duration-300 flex flex-col group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                            <img src="card_acceso.jpg" alt="Acceso Premier Samara" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                                NUEVO
+                            </span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                    Acceso Premier Samara
+                                </h3>
+                                <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                    <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                    <span>Samara Residencial Boutique</span>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-vector-square text-brand-gold"></i>
+                                        <span>450 m²</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-shield-cat text-brand-gold"></i>
+                                        <span>Lote Premium</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                    $350,000 <span class="text-xs font-sans font-semibold text-gray-500">USD</span>
+                                </div>
+                            </div>
+
+                            <button onclick="openPropertyModal('Acceso Premier Samara', '$350,000 USD', '450 m²', 'Samara Residencial Boutique', 'card_acceso.jpg', 'Lote de terreno residencial premium estratégicamente ubicado cerca de la caseta de acceso con seguridad controlada 24/7.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center">
+                                Ver Más
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             SECCIÓN DE SERVICIOS
+        ========================================== -->
+        <section id="servicios" class="py-20 bg-brand-cream border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-14">
+                    <span class="text-brand-gold text-sm font-bold uppercase tracking-widest">Nuestros Servicios</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-brand-green tracking-tight mt-2">
+                        Soluciones Inmobiliarias Integrales
+                    </h2>
+                    <div class="w-20 h-1 bg-brand-gold mx-auto my-4 rounded-full"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brand-gold/30 transition-all">
+                        <div class="w-14 h-14 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-house-chimney-window"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-brand-green mb-3">Venta y Venta de Terrenos</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Te guiamos en la compra o venta de terrenos y casas residenciales evaluando el máximo valor comercial del mercado.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brand-gold/30 transition-all">
+                        <div class="w-14 h-14 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-brand-green mb-3">Asesoría Legal & Notarial</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Garantizamos la certidumbre jurídica total en cada transacción inmobiliaria, revisión de escrituras y trámite notarial.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md hover:border-brand-gold/30 transition-all">
+                        <div class="w-14 h-14 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center text-2xl mb-6">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-brand-green mb-3">Gestión de Créditos</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Tramitamos y optimizamos créditos hipotecarios bancarios, Infonavit y cofinaciamientos a tu medida.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================
+         SECCIÓN DE PIE DE PÁGINA (GREEN FOOTER)
+    ========================================== -->
+    <footer id="contacto" class="bg-brand-green text-white pt-16 pb-8 border-t border-brand-greenDark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 pb-16 border-b border-white/10">
+                
+                <!-- Foot Box 1: Informes por WhatsApp -->
+                <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
+                    <div>
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-full bg-brand-gold flex items-center justify-center text-white shadow-sm">
+                                <i class="fa-solid fa-phone text-lg"></i>
+                            </div>
+                            <h3 class="text-xl font-bold font-serif tracking-wide text-brand-gold">
+                                Informes por WhatsApp
+                            </h3>
+                        </div>
+
+                        <div class="space-y-3 font-mono font-bold text-2xl tracking-wider text-white pl-2">
+                            <a href="https://wa.me/526861622403" target="_blank" class="flex items-center gap-3 hover:text-brand-gold transition-colors">
+                                <i class="fa-brands fa-whatsapp text-brand-whatsapp text-2xl"></i>
+                                <span>686 162 2403</span>
+                            </a>
+                            <a href="https://wa.me/526867013628" target="_blank" class="flex items-center gap-3 hover:text-brand-gold transition-colors">
+                                <i class="fa-brands fa-whatsapp text-brand-whatsapp text-2xl"></i>
+                                <span>686 701 3628</span>
+                            </a>
+                            <a href="https://wa.me/526862129311" target="_blank" class="flex items-center gap-3 hover:text-brand-gold transition-colors">
+                                <i class="fa-brands fa-whatsapp text-brand-whatsapp text-2xl"></i>
+                                <span>686 212 9311</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Message CTA Box exact wording from Index.jpg -->
+                    <div class="bg-white text-gray-800 p-4 rounded-2xl shadow-lg flex items-center gap-4 border-2 border-brand-gold/30">
+                        <div class="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center text-white text-xl shrink-0">
+                            <i class="fa-solid fa-comment-dots"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-base text-gray-900 leading-tight">Envíanos mensaje</p>
+                            <p class="text-xs text-brand-gold font-bold">para revisar tu caso.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Foot Box 2: Formulario Contáctanos -->
+                <div class="lg:col-span-7 bg-brand-greenDark/60 p-6 sm:p-8 rounded-2xl border border-white/10 shadow-inner">
+                    <h3 class="text-xl font-bold font-serif text-white mb-6 tracking-wide">
+                        Contáctanos
+                    </h3>
+                    
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="form-name" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1">Nome</label>
+                                <input type="text" id="form-name" placeholder="Name" required class="w-full px-4 py-3 rounded-md bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold font-sans text-sm">
+                            </div>
+                            <div>
+                                <label for="form-email" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1">Email</label>
+                                <input type="email" id="form-email" placeholder="Email" required class="w-full px-4 py-3 rounded-md bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold font-sans text-sm">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="form-message" class="block text-xs font-semibold text-gray-300 uppercase tracking-wider mb-1">Mensaje</label>
+                            <textarea id="form-message" rows="3" placeholder="Mensagem" required class="w-full px-4 py-3 rounded-md bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-brand-gold font-sans text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded-md bg-brand-gold text-white font-bold text-sm tracking-wider uppercase shadow-md hover:bg-brand-goldHover transition-all duration-200">
+                            Contactar
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- Bottom Sub-Footer Section -->
+            <div class="pt-10 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                
+                <!-- Logo & Social Media -->
+                <div class="md:col-span-4 space-y-4">
+                    <div class="flex items-center gap-3.5">
+                        <div class="w-14 h-14 rounded-full flex items-center justify-center shrink-0">
+                            <img src="logo_exact.svg" alt="Logo Reynoso" class="w-full h-full object-contain">
+                        </div>
+                        <div class="flex flex-col justify-center">
+                            <span class="font-serif font-extrabold text-xl text-white block leading-none tracking-wider">REYNOSO</span>
+                            <span class="text-xs font-bold text-brand-gold uppercase tracking-[0.2em] mt-1">&amp; ASOCIADOS</span>
+                            <span class="text-[9px] font-medium text-gray-300 uppercase tracking-[0.18em] mt-0.5">ASESORÍA INMOBILIARIA</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center gap-3 pt-1">
+                        <span class="text-xs text-gray-400 font-semibold mr-1">Social media</span>
+                        <a href="https://www.facebook.com/Mexicalihome/" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-full bg-brand-gold flex items-center justify-center text-white hover:bg-white hover:text-brand-green transition-colors" aria-label="Facebook Mexicali Home">
+                            <i class="fa-brands fa-facebook-f text-xs"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="w-8 h-8 rounded-full bg-brand-gold flex items-center justify-center text-white hover:bg-white hover:text-brand-green transition-colors">
+                            <i class="fa-brands fa-instagram text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Google Map Preview Embed -->
+                <div class="md:col-span-4">
+                    <div class="rounded-xl overflow-hidden shadow-md border border-white/20 h-32 bg-gray-200 relative">
+                        <iframe title="Ubicación Mexicali" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107567.89260655452!2d-115.4988771!3d32.6245388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d7700a9d80d287%3A0xb308a0d0d829910d!2sMexicali%2C%20B.C.!5e0!3m2!1ses!2smx!4v1700000000000!5m2!1ses!2smx" class="w-full h-full border-0" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Contact phone list footer -->
+                <div class="md:col-span-4 text-xs space-y-2 text-gray-300 md:text-right">
+                    <p class="font-bold text-sm text-white mb-1">Contacto</p>
+                    <p><i class="fa-solid fa-phone text-brand-gold mr-1"></i> 688 182 2403</p>
+                    <p><i class="fa-solid fa-phone text-brand-gold mr-1"></i> 686 701 3628</p>
+                    <p><i class="fa-solid fa-phone text-brand-gold mr-1"></i> 686 212 9311</p>
+                </div>
+
+            </div>
+
+            <!-- Copyright line -->
+            <div class="mt-10 pt-6 border-t border-white/5 text-center text-xs text-gray-400">
+                <p>&copy; 2026 Reynoso & Asociados - Asesoría Inmobiliaria. Todos los derechos reservados. Mexicali, B.C.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         BOTÓN FLOTANTE DE WHATSAPP
+    ========================================== -->
+    <a href="https://wa.me/526861622403?text=Hola,%20quisiera%20más%20información%20sobre%20las%20propiedades%20destacadas." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-brand-whatsapp text-white flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition-transform duration-300 group" aria-label="Chat por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="absolute right-16 top-2 bg-gray-900 text-white text-xs font-semibold px-3 py-1.5 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            ¡Contáctanos en vivo!
+        </span>
+    </a>
+
+    <!-- ==========================================
+         MODAL DE DETALLE DE PROPIEDAD
+    ========================================== -->
+    <div id="property-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl transform transition-all relative">
+            <button onclick="closePropertyModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="relative h-64 sm:h-72 bg-gray-100">
+                <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
+                <span class="absolute bottom-4 left-4 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded-md shadow">
+                    NUEVO
+                </span>
+            </div>
+            <div class="p-6 sm:p-8 space-y-4">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 id="modal-title" class="font-serif font-bold text-2xl text-brand-green"></h3>
+                        <p id="modal-location" class="text-sm font-medium text-gray-500 flex items-center gap-1.5 mt-1">
+                            <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                            <span></span>
+                        </p>
+                    </div>
+                    <div id="modal-price" class="text-2xl font-extrabold text-brand-gold font-serif"></div>
+                </div>
+
+                <div class="flex items-center gap-4 py-3 border-y border-gray-100 text-sm font-semibold text-gray-700">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
+                        <span id="modal-area"></span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-shield-halved text-brand-gold"></i>
+                        <span>Seguridad 24/7</span>
+                    </div>
+                </div>
+
+                <p id="modal-desc" class="text-sm text-gray-600 leading-relaxed"></p>
+
+                <div class="pt-4 flex gap-3">
+                    <a id="modal-wa-btn" href="#" target="_blank" class="flex-1 py-3 bg-brand-whatsapp text-white text-center font-bold text-sm rounded-md shadow hover:bg-emerald-600 transition-colors flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Solicitar Informes por WhatsApp</span>
+                    </a>
+                    <button onclick="closePropertyModal()" class="px-5 py-3 bg-gray-100 text-gray-700 font-semibold text-sm rounded-md hover:bg-gray-200 transition-colors">
+                        Cerrar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Logic -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Modal Handler
+        function openPropertyModal(title, price, area, location, img, desc) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-price').textContent = price;
+            document.getElementById('modal-area').textContent = area;
+            document.getElementById('modal-location').querySelector('span').textContent = location;
+            document.getElementById('modal-img').src = img;
+            document.getElementById('modal-desc').textContent = desc;
+
+            const waMsg = encodeURIComponent(`Hola, me interesa solicitar información sobre: ${title} (${price}) en ${location}.`);
+            document.getElementById('modal-wa-btn').href = `https://wa.me/526861622403?text=${waMsg}`;
+
+            document.getElementById('property-modal').classList.remove('hidden');
+        }
+
+        function closePropertyModal() {
+            document.getElementById('property-modal').classList.add('hidden');
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('form-name').value;
+            const email = document.getElementById('form-email').value;
+            const msg = document.getElementById('form-message').value;
+
+            const whatsappUrl = `https://wa.me/526861622403?text=${encodeURIComponent(`Contacto desde Sitio Web:\nNombre: ${name}\nEmail: ${email}\nMensaje: ${msg}`)}`;
+            window.open(whatsappUrl, '_blank');
+
+            alert('¡Gracias por tu mensaje! Te redirigiremos a WhatsApp para atenderte de inmediato.');
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>

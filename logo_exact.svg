@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
+  <defs>
+    <!-- Top Arc Path for REYNOSO & ASOCIADOS -->
+    <path id="topArc" d="M 42 150 A 108 108 0 1 1 258 150" />
+    <!-- Bottom Arc Path for ASESORÍA INMOBILIARIA -->
+    <path id="bottomArc" d="M 258 150 A 108 108 0 0 1 42 150" />
+  </defs>
+
+  <!-- Outer Forest Green Emblem -->
+  <circle cx="150" cy="150" r="146" fill="#1c3524" />
+
+  <!-- Outer & Inner White Border Rings -->
+  <circle cx="150" cy="150" r="144" fill="none" stroke="#ffffff" stroke-width="2" />
+  <circle cx="150" cy="150" r="102" fill="none" stroke="#ffffff" stroke-width="2" />
+
+  <!-- Top Curved Text: REYNOSO & ASOCIADOS -->
+  <text fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" letter-spacing="3">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">REYNOSO &amp; ASOCIADOS</textPath>
+  </text>
+
+  <!-- Bottom Curved Text: ASESORÍA INMOBILIARIA -->
+  <text fill="#ffffff" font-family="'Plus Jakarta Sans', sans-serif" font-size="15" font-weight="700" letter-spacing="2">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">ASESORÍA INMOBILIARIA</textPath>
+  </text>
+
+  <!-- Inner Cream Background Circle -->
+  <circle cx="150" cy="150" r="100" fill="#f4f3ea" />
+
+  <!-- Green House Roof Outline -->
+  <path d="M 85 140 L 150 88 L 215 140" fill="none" stroke="#1c3524" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Green House Base Frame -->
+  <path d="M 98 136 L 98 188 L 202 188 L 202 136" fill="none" stroke="#1c3524" stroke-width="8" stroke-linejoin="round" />
+
+  <!-- Central Monogram: MH -->
+  <text x="150" y="170" font-family="'Playfair Display', 'Times New Roman', serif" font-size="46" font-weight="800" fill="#1c3524" text-anchor="middle" letter-spacing="2">MH</text>
+
+  <!-- Subtext: MEXICALI HOME -->
+  <text x="150" y="204" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#1c3524" text-anchor="middle" letter-spacing="2">MEXICALI HOME</text>
+</svg>
