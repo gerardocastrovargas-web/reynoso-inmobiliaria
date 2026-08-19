@@ -6,12 +6,16 @@
     <title>Reynoso & Asociados | Asesoría Inmobiliaria en Mexicali</title>
     <meta name="description" content="Encuentra la propiedad de tus sueños o vende tu inmueble con seguridad y confianza. Asesoría inmobiliaria profesional por Francisco Reynoso en Mexicali.">
     
+    <!-- Force Light Color Scheme (Prevents Android / Samsung Dark Mode from automatically darkening cream and white backgrounds) -->
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <meta name="theme-color" content="#1c3524">
+    
     <!-- Open Graph / WhatsApp Sharing Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Reynoso & Asociados | Asesoría Inmobiliaria en Mexicali">
     <meta property="og:description" content="Encuentra tu propiedad ideal o vende tu inmueble con seguridad y confianza en Mexicali.">
     <meta property="og:image" content="hero_keys_hd.jpg?v=4">
-    <meta name="theme-color" content="#1c3524">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,16 +64,23 @@
     </script>
 
     <style>
-        /* Instant CSS Reset & Brand Fallbacks (Prevents unstyled SVG/layout rendering in WhatsApp) */
+        /* Instant CSS Reset & Brand Fallbacks (Prevents forced Dark Mode inversion on Android / Samsung devices) */
+        :root {
+            color-scheme: light !important;
+            supported-color-schemes: light !important;
+            forced-color-adjust: none !important;
+        }
         *, ::before, ::after { box-sizing: border-box; }
-        html { line-height: 1.5; -webkit-text-size-adjust: 100%; font-family: 'Plus Jakarta Sans', sans-serif; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; font-family: 'Plus Jakarta Sans', sans-serif; color-scheme: light !important; }
         html, body {
             overflow-x: hidden !important;
             width: 100% !important;
             max-width: 100vw !important;
             margin: 0;
             padding: 0;
-            background-color: #faf8f3;
+            background-color: #faf8f3 !important;
+            color: #1f2937 !important;
+            color-scheme: light !important;
         }
         img, svg, video { max-width: 100%; height: auto; }
         a { color: inherit; text-decoration: none; }
