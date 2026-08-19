@@ -21,7 +21,10 @@
     <!-- FontAwesome 6 icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Tailwind CSS CDN -->
+    <!-- Static Tailwind CSS (Pre-compiled CSS for instant rendering in WhatsApp & mobile WebViews) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+
+    <!-- Tailwind JS CDN for dynamic utility expansion -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -57,12 +60,34 @@
     </script>
 
     <style>
-        /* Custom aesthetics & smooth transitions */
+        /* Instant CSS Reset & Brand Fallbacks (Prevents unstyled SVG/layout rendering in WhatsApp) */
+        *, ::before, ::after { box-sizing: border-box; }
+        html { line-height: 1.5; -webkit-text-size-adjust: 100%; font-family: 'Plus Jakarta Sans', sans-serif; }
         html, body {
             overflow-x: hidden !important;
             width: 100% !important;
             max-width: 100vw !important;
+            margin: 0;
+            padding: 0;
+            background-color: #faf8f3;
         }
+        img, svg, video { max-width: 100%; height: auto; }
+        a { color: inherit; text-decoration: none; }
+        
+        /* Logo & Header Critical Sizing Fallbacks */
+        .w-14 { width: 3.5rem !important; }
+        .h-14 { height: 3.5rem !important; }
+        .w-16 { width: 4rem !important; }
+        .h-16 { height: 4rem !important; }
+        .rounded-full { border-radius: 9999px !important; }
+        
+        /* Brand Colors Direct CSS Fallbacks */
+        .bg-brand-green { background-color: #1c3524 !important; }
+        .bg-brand-greenDark { background-color: #132619 !important; }
+        .bg-brand-gold { background-color: #c29b38 !important; }
+        .bg-brand-cream { background-color: #faf8f3 !important; }
+        .text-brand-green { color: #1c3524 !important; }
+        .text-brand-gold { color: #c29b38 !important; }
         .glass-header {
             background: rgba(255, 255, 255, 0.94);
             backdrop-filter: blur(12px);
