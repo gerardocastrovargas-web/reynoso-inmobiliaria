@@ -320,11 +320,13 @@ END:VCARD`;
             modal.classList.toggle('hidden');
 
             if (!qrGenerated && !modal.classList.contains('hidden')) {
-                const currentUrl = window.location.href;
-                document.getElementById('qr-url-text').textContent = currentUrl;
+                const targetUrl = window.location.protocol.startsWith('http') && !window.location.hostname.includes('localhost') 
+                    ? window.location.href 
+                    : 'https://reynoso-inmobiliaria.vercel.app/tarjeta.html';
+                document.getElementById('qr-url-text').textContent = targetUrl;
                 
                 new QRCode(document.getElementById('qrcode-canvas'), {
-                    text: currentUrl,
+                    text: targetUrl,
                     width: 200,
                     height: 200,
                     colorDark : "#1c3524",
