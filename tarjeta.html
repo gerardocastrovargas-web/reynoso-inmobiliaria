@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth bg-gray-900 min-h-screen">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Francisco Reynoso | Asesor Inmobiliario - Tarjeta Digital</title>
+    <meta name="description" content="Tarjeta de presentación digital de Francisco Reynoso - Asesor Inmobiliario en Mexicali. Guarda mi contacto y explora propiedades disponibles.">
+    
+    <!-- Force Light Color Scheme -->
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#1c3524">
+    
+    <!-- Open Graph Meta Tags for WhatsApp & Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Francisco Reynoso | Asesor Inmobiliario">
+    <meta property="og:description" content="¡Transformamos tus sueños en tu nuevo hogar! Guarda mi contacto de inmediato.">
+    <meta property="og:image" content="Frank.jpg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- QRCodeJS Library for HD QR Code Generation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#1c3524',      /* Deep Forest Green */
+                            greenDark: '#132619',
+                            greenLight: '#264832',
+                            gold: '#c29b38',       /* Muted Ochre / Gold */
+                            goldHover: '#a8832a',
+                            goldLight: '#e6cb7a',
+                            cream: '#faf8f3',
+                            whatsapp: '#25D366'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 25px rgba(194, 155, 56, 0.45)',
+                        'card-shadow': '0 25px 60px -15px rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            color-scheme: light !important;
+        }
+        body {
+            background-color: #0f172a;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .gold-border-gradient {
+            background: linear-gradient(135deg, #dfc578 0%, #c29b38 50%, #8c6a1d 100%);
+            padding: 4px;
+        }
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #b88e2c 0%, #d4b45d 50%, #94711f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .pattern-bg {
+            background-color: #1c3524;
+            background-image: radial-gradient(rgba(194, 155, 56, 0.15) 1px, transparent 0);
+            background-size: 16px 16px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-3 sm:p-6 bg-slate-950">
+
+    <!-- MAIN DIGITAL CARD CONTAINER -->
+    <main class="w-full max-w-sm sm:max-w-md bg-white rounded-3xl overflow-hidden shadow-card-shadow border border-brand-gold/30 flex flex-col relative my-auto">
+        
+        <!-- TOP COVER HEADER WITH PROFILE PICTURE OVERLAY -->
+        <div class="relative pattern-bg h-36 sm:h-44 flex justify-center items-end pb-0">
+            <!-- Decorative Gold Accent Strip -->
+            <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold"></div>
+
+            <!-- Profile Picture Circle with Metallic Gold Ring -->
+            <div class="relative translate-y-12 sm:translate-y-16 z-20">
+                <div class="gold-border-gradient rounded-full shadow-2xl">
+                    <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-white bg-gray-100">
+                        <img src="Frank.jpg" alt="Francisco Reynoso - Asesor Inmobiliario" class="w-full h-full object-cover object-top">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN CARD BODY CONTENT -->
+        <div class="pt-16 sm:pt-20 px-6 pb-6 text-center bg-white flex flex-col items-center">
+            
+            <!-- Logo Emblem -->
+            <div class="flex items-center justify-center gap-2 mb-3">
+                <div class="w-8 h-8 rounded-full bg-brand-green/10 flex items-center justify-center p-1">
+                    <img src="logo_exact.svg" alt="Mexicali Home Logo" class="w-full h-full object-contain">
+                </div>
+                <span class="text-xs font-extrabold uppercase tracking-widest text-brand-green">Mexicali Home</span>
+            </div>
+
+            <!-- Agent Name -->
+            <h1 class="font-serif font-extrabold text-2xl sm:text-3xl tracking-tight gold-text-gradient">
+                Francisco Reynoso
+            </h1>
+
+            <!-- Professional Subtitle -->
+            <h2 class="text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-brand-green mt-1">
+                ASESOR INMOBILIARIO
+            </h2>
+
+            <!-- Slogan -->
+            <p class="font-serif italic text-sm sm:text-base text-brand-greenLight font-semibold mt-3 max-w-xs">
+                "¡Transformamos tus sueños en tu nuevo hogar!"
+            </p>
+
+            <!-- Decorative Gold Line -->
+            <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-brand-gold to-transparent my-5"></div>
+        </div>
+
+        <!-- CONTACT DETAILS BLOCK (GREEN CONTAINER WITH GOLD ICON PILLARS) -->
+        <div class="pattern-bg p-6 text-white border-t-2 border-brand-gold/40 flex flex-col space-y-3.5">
+            
+            <!-- Contact Row 1: Phone -->
+            <a href="tel:526867013628" class="flex items-center gap-3.5 group hover:translate-x-1 transition-transform">
+                <div class="w-10 h-10 rounded-full gold-border-gradient flex items-center justify-center text-brand-green font-bold text-sm shadow-md shrink-0">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="flex flex-col text-left">
+                    <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold">Teléfono / WhatsApp</span>
+                    <span class="text-sm sm:text-base font-extrabold tracking-wide text-white group-hover:text-brand-goldLight transition-colors">
+                        (686) 701 36 28
+                    </span>
+                </div>
+            </a>
+
+            <!-- Contact Row 2: Email -->
+            <a href="mailto:mexicalihome.asociados@gmail.com" class="flex items-center gap-3.5 group hover:translate-x-1 transition-transform">
+                <div class="w-10 h-10 rounded-full gold-border-gradient flex items-center justify-center text-brand-green font-bold text-sm shadow-md shrink-0">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="flex flex-col text-left overflow-hidden">
+                    <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold">Correo Electrónico</span>
+                    <span class="text-xs sm:text-sm font-semibold text-white group-hover:text-brand-goldLight transition-colors truncate">
+                        mexicalihome.asociados@gmail.com
+                    </span>
+                </div>
+            </a>
+
+            <!-- Contact Row 3: Facebook -->
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 group hover:translate-x-1 transition-transform">
+                <div class="w-10 h-10 rounded-full gold-border-gradient flex items-center justify-center text-brand-green font-bold text-sm shadow-md shrink-0">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="flex flex-col text-left">
+                    <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold">Página de Facebook</span>
+                    <span class="text-xs sm:text-sm font-semibold text-white group-hover:text-brand-goldLight transition-colors">
+                        Mexicali Home
+                    </span>
+                </div>
+            </a>
+
+            <!-- Contact Row 4: Website -->
+            <a href="index.html" class="flex items-center gap-3.5 group hover:translate-x-1 transition-transform">
+                <div class="w-10 h-10 rounded-full gold-border-gradient flex items-center justify-center text-brand-green font-bold text-sm shadow-md shrink-0">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="flex flex-col text-left">
+                    <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold">Sitio Web Oficial</span>
+                    <span class="text-xs sm:text-sm font-semibold text-white group-hover:text-brand-goldLight transition-colors">
+                        www.mexicalihome.com.mx
+                    </span>
+                </div>
+            </a>
+
+            <!-- Contact Row 5: Location -->
+            <div class="flex items-center gap-3.5">
+                <div class="w-10 h-10 rounded-full gold-border-gradient flex items-center justify-center text-brand-green font-bold text-sm shadow-md shrink-0">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="flex flex-col text-left">
+                    <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold">Ubicación</span>
+                    <span class="text-xs sm:text-sm font-semibold text-white">
+                        Mexicali, Baja California
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACTION BUTTONS SECTION -->
+        <div class="p-5 bg-gray-50 border-t border-gray-200 flex flex-col space-y-2.5">
+            
+            <!-- Button 1: Save Contact (VCF Download) -->
+            <button onclick="downloadVCard()" class="w-full py-3.5 rounded-xl bg-brand-gold text-white font-bold text-sm tracking-wide shadow-md hover:bg-brand-goldHover transition-all flex items-center justify-center gap-2.5 transform active:scale-95">
+                <i class="fa-solid fa-address-card text-base"></i>
+                <span>Guardar en Contactos del Celular</span>
+            </button>
+
+            <!-- Button 2: WhatsApp Direct -->
+            <a href="https://wa.me/526867013628?text=Hola%20Francisco,%20escane%C3%A9%20tu%20tarjeta%20digital%20y%20quisiera%20solicitar%20asesor%C3%ADa%20inmobiliaria." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-brand-whatsapp text-white font-bold text-sm shadow hover:bg-emerald-600 transition-all flex items-center justify-center gap-2 text-center">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Enviar WhatsApp Directo</span>
+            </a>
+
+            <!-- Button 3: View Catalog -->
+            <a href="index.html" class="w-full py-3 rounded-xl bg-brand-green text-white font-bold text-sm shadow hover:bg-brand-greenDark transition-all flex items-center justify-center gap-2 text-center">
+                <i class="fa-solid fa-house-circle-check text-base"></i>
+                <span>Ver Catálogo de Propiedades</span>
+            </a>
+
+            <div class="flex gap-2 pt-1">
+                <!-- Button 4: Share Card -->
+                <button onclick="shareDigitalCard()" class="flex-1 py-2.5 rounded-lg bg-white border border-gray-300 text-gray-700 font-semibold text-xs hover:bg-gray-100 transition-colors flex items-center justify-center gap-1.5">
+                    <i class="fa-solid fa-share-nodes text-brand-gold"></i>
+                    <span>Compartir Tarjeta</span>
+                </button>
+
+                <!-- Button 5: View QR Code Modal -->
+                <button onclick="toggleQRModal()" class="flex-1 py-2.5 rounded-lg bg-white border border-gray-300 text-gray-700 font-semibold text-xs hover:bg-gray-100 transition-colors flex items-center justify-center gap-1.5">
+                    <i class="fa-solid fa-qrcode text-brand-gold"></i>
+                    <span>Ver Código QR</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- FOOTER COPY -->
+        <div class="bg-gray-100 py-3 text-center text-[10px] font-semibold text-gray-500 border-t border-gray-200">
+            Reynoso & Asociados • Mexicali Home © 2026
+        </div>
+    </main>
+
+    <!-- QR CODE MODAL FOR PRINTING & SHARING -->
+    <div id="qr-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-sm w-full p-6 text-center shadow-2xl relative">
+            <button onclick="toggleQRModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            
+            <h3 class="font-serif font-bold text-xl text-brand-green mb-1">Código QR de la Tarjeta</h3>
+            <p class="text-xs text-gray-500 mb-4">Escanea o descarga este QR para colocarlo en tu tarjeta física impresa.</p>
+
+            <div class="flex justify-center p-4 bg-gray-50 rounded-xl border border-gray-200 shadow-inner mb-4">
+                <div id="qrcode-canvas"></div>
+            </div>
+
+            <p class="text-[11px] text-gray-600 font-medium break-all mb-4 bg-gray-100 p-2 rounded" id="qr-url-text"></p>
+
+            <button onclick="downloadQRCodeImage()" class="w-full py-2.5 rounded-xl bg-brand-gold text-white font-bold text-xs shadow hover:bg-brand-goldHover transition-colors flex items-center justify-center gap-2">
+                <i class="fa-solid fa-download"></i>
+                <span>Descargar Código QR (Imagen HD)</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // 1. Download vCard (.vcf) function for mobile contact saving
+        function downloadVCard() {
+            const vcardData = `BEGIN:VCARD
+VERSION:3.0
+N:Reynoso;Francisco;;;
+FN:Francisco Reynoso
+ORG:Reynoso & Asociados / Mexicali Home
+TITLE:Asesor Inmobiliario
+TEL;TYPE=CELL,VOICE:+526867013628
+EMAIL;TYPE=INTERNET,HOME:mexicalihome.asociados@gmail.com
+URL:https://gerardocastrovargas-web.github.io/reynoso-inmobiliaria/
+ADR;TYPE=WORK:;;Mexicali;Baja California;;;Mexico
+NOTE:Asesoría Inmobiliaria Profesional en Mexicali
+END:VCARD`;
+
+            const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', 'Francisco_Reynoso_Asesor_Inmobiliario.vcf');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // 2. Share digital card via Web Share API or Clipboard Copy
+        function shareDigitalCard() {
+            const shareData = {
+                title: 'Francisco Reynoso | Asesor Inmobiliario',
+                text: 'Tarjeta digital de Francisco Reynoso - Asesor Inmobiliario en Mexicali:',
+                url: window.location.href
+            };
+
+            if (navigator.share) {
+                navigator.share(shareData).catch(() => {});
+            } else {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    alert('¡Enlace de la tarjeta copiado al portapapeles!');
+                });
+            }
+        }
+
+        // 3. QR Code Generator Initializer
+        let qrGenerated = false;
+
+        function toggleQRModal() {
+            const modal = document.getElementById('qr-modal');
+            modal.classList.toggle('hidden');
+
+            if (!qrGenerated && !modal.classList.contains('hidden')) {
+                const currentUrl = window.location.href;
+                document.getElementById('qr-url-text').textContent = currentUrl;
+                
+                new QRCode(document.getElementById('qrcode-canvas'), {
+                    text: currentUrl,
+                    width: 200,
+                    height: 200,
+                    colorDark : "#1c3524",
+                    colorLight : "#ffffff",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+                qrGenerated = true;
+            }
+        }
+
+        // 4. Download QR Code HD Image
+        function downloadQRCodeImage() {
+            const qrImg = document.querySelector('#qrcode-canvas img');
+            const qrCanvas = document.querySelector('#qrcode-canvas canvas');
+            let imageSrc = '';
+
+            if (qrImg && qrImg.src) {
+                imageSrc = qrImg.src;
+            } else if (qrCanvas) {
+                imageSrc = qrCanvas.toDataURL("image/png");
+            }
+
+            if (imageSrc) {
+                const link = document.createElement('a');
+                link.href = imageSrc;
+                link.download = 'QR_Tarjeta_Digital_Francisco_Reynoso.png';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+    </script>
+</body>
+</html>
