@@ -6,11 +6,11 @@
     <title>Francisco Reynoso | Asesor Inmobiliario - Tarjeta Digital</title>
     <meta name="description" content="Tarjeta de presentación digital de Francisco Reynoso - Asesor Inmobiliario en Mexicali. Guarda mi contacto y explora propiedades disponibles.">
     
-    <!-- Force Light Color Scheme (Prevents Samsung Internet & Android Dark Mode from darkening white backgrounds and gold text) -->
-    <meta name="color-scheme" content="light">
-    <meta name="supported-color-schemes" content="light">
+    <!-- Color Scheme & Theme Color -->
+    <meta name="color-scheme" content="dark light">
+    <meta name="supported-color-schemes" content="dark light">
     <meta name="forced-color-adjust" content="none">
-    <meta name="theme-color" content="#1c3524">
+    <meta name="theme-color" content="#132619">
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
@@ -31,21 +31,19 @@
 
     <style>
         :root {
-            color-scheme: light !important;
-            supported-color-schemes: light !important;
+            color-scheme: dark light !important;
             forced-color-adjust: none !important;
         }
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            color-scheme: light !important;
             forced-color-adjust: none !important;
         }
         html, body {
-            background-color: #0f172a !important;
+            background-color: #0b140e !important;
             font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
-            color: #1f2937 !important;
+            color: #ffffff !important;
             min-height: 100vh;
             width: 100%;
             display: flex;
@@ -53,33 +51,31 @@
             align-items: center;
             padding: 12px;
             -webkit-tap-highlight-color: transparent;
-            color-scheme: light !important;
             forced-color-adjust: none !important;
         }
 
-        /* Main Card Container */
+        /* Main Card Container - Unified Luxury Forest Green Theme */
         .card-container {
             width: 100%;
             max-width: 380px;
-            background-color: #ffffff !important;
-            background: #ffffff !important;
+            background-color: #132619 !important;
+            background: #132619 !important;
             border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
-            border: 1px solid rgba(194, 155, 56, 0.4);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+            border: 1.5px solid #c29b38 !important;
             display: flex;
             flex-direction: column;
             margin: auto;
             position: relative;
-            color-scheme: light !important;
             forced-color-adjust: none !important;
         }
 
         /* Top Header Cover */
         .card-header {
             position: relative;
-            height: 140px;
-            background-color: #1c3524 !important;
+            height: 135px;
+            background-color: #0e1d13 !important;
             background-image: radial-gradient(rgba(194, 155, 56, 0.25) 1px, transparent 0) !important;
             background-size: 16px 16px;
             display: flex;
@@ -103,10 +99,10 @@
             z-index: 10;
         }
         .avatar-gold-ring {
-            background: linear-gradient(135deg, #dfc578 0%, #c29b38 50%, #8c6a1d 100%) !important;
+            background: linear-gradient(135deg, #e6cb7a 0%, #c29b38 50%, #8c6a1d 100%) !important;
             padding: 4px;
             border-radius: 50%;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
         .avatar-img {
             width: 124px;
@@ -114,18 +110,18 @@
             border-radius: 50%;
             object-fit: cover;
             object-position: top center;
-            border: 3px solid #ffffff !important;
+            border: 3px solid #132619 !important;
             display: block;
-            background-color: #f3f4f6 !important;
+            background-color: #132619 !important;
         }
 
-        /* Card Content */
+        /* Card Content Body */
         .card-body {
-            padding: 62px 24px 20px 24px;
+            padding: 60px 24px 22px 24px;
             text-align: center;
-            background-color: #ffffff !important;
-            background: #ffffff !important;
-            color: #1f2937 !important;
+            background-color: #132619 !important;
+            background: #132619 !important;
+            color: #ffffff !important;
             forced-color-adjust: none !important;
         }
         .brand-emblem {
@@ -145,26 +141,27 @@
             font-weight: 800;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: #1c3524 !important;
-            -webkit-text-fill-color: #1c3524 !important;
+            color: #e6cb7a !important;
+            -webkit-text-fill-color: #e6cb7a !important;
         }
 
         .agent-name {
             font-family: 'Playfair Display', serif;
-            font-size: 26px;
+            font-size: 27px;
             font-weight: 800;
-            color: #c29b38 !important;
-            -webkit-text-fill-color: #c29b38 !important;
+            color: #f3e5ab !important;
+            -webkit-text-fill-color: #f3e5ab !important;
             line-height: 1.25;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
             forced-color-adjust: none !important;
         }
         .agent-title {
             font-size: 12px;
             font-weight: 800;
-            letter-spacing: 0.22em;
+            letter-spacing: 0.25em;
             text-transform: uppercase;
-            color: #1c3524 !important;
-            -webkit-text-fill-color: #1c3524 !important;
+            color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
             margin-top: 4px;
             forced-color-adjust: none !important;
         }
@@ -172,8 +169,8 @@
             font-family: 'Playfair Display', serif;
             font-style: italic;
             font-size: 14px;
-            color: #264832 !important;
-            -webkit-text-fill-color: #264832 !important;
+            color: #dfc578 !important;
+            -webkit-text-fill-color: #dfc578 !important;
             font-weight: 600;
             margin-top: 10px;
             forced-color-adjust: none !important;
@@ -189,10 +186,11 @@
         .contact-block {
             background-color: #1c3524 !important;
             background: #1c3524 !important;
-            background-image: radial-gradient(rgba(194, 155, 56, 0.18) 1px, transparent 0) !important;
+            background-image: radial-gradient(rgba(194, 155, 56, 0.2) 1px, transparent 0) !important;
             background-size: 16px 16px;
             padding: 24px 20px;
-            border-top: 2px solid rgba(194, 155, 56, 0.4);
+            border-top: 1px solid rgba(194, 155, 56, 0.4);
+            border-bottom: 1px solid rgba(194, 155, 56, 0.4);
             display: flex;
             flex-direction: column;
             gap: 14px;
@@ -214,14 +212,14 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: linear-gradient(135deg, #dfc578 0%, #c29b38 50%, #8c6a1d 100%);
+            background: linear-gradient(135deg, #e6cb7a 0%, #c29b38 50%, #8c6a1d 100%) !important;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #1c3524 !important;
+            color: #132619 !important;
             font-size: 15px;
             flex-shrink: 0;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
         .contact-info {
             display: flex;
@@ -231,7 +229,8 @@
         }
         .contact-label {
             font-size: 10px;
-            color: #dfc578;
+            color: #dfc578 !important;
+            -webkit-text-fill-color: #dfc578 !important;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -240,6 +239,7 @@
             font-size: 13px;
             font-weight: 600;
             color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -248,24 +248,28 @@
             font-size: 15px;
             font-weight: 800;
             color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
         }
 
         /* Action Buttons Block */
         .actions-block {
-            padding: 18px 20px;
-            background-color: #f9fafb;
-            border-top: 1px solid #e5e7eb;
+            padding: 20px;
+            background-color: #132619 !important;
+            background: #132619 !important;
             display: flex;
             flex-direction: column;
             gap: 10px;
+            forced-color-adjust: none !important;
         }
 
         .btn-primary {
             width: 100%;
             padding: 14px;
             border-radius: 12px;
-            background-color: #c29b38;
+            background: linear-gradient(135deg, #c29b38 0%, #a8832a 100%) !important;
+            background-color: #c29b38 !important;
             color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
             font-weight: 800;
             font-size: 13px;
             border: none;
@@ -275,19 +279,21 @@
             justify-content: center;
             gap: 8px;
             text-decoration: none;
-            box-shadow: 0 4px 12px rgba(194, 155, 56, 0.35);
-            transition: background-color 0.2s ease;
+            box-shadow: 0 4px 12px rgba(194, 155, 56, 0.4);
+            transition: transform 0.15s ease;
         }
-        .btn-primary:hover {
-            background-color: #a8832a;
+        .btn-primary:active {
+            transform: scale(0.98);
         }
 
         .btn-whatsapp {
             width: 100%;
             padding: 13px;
             border-radius: 12px;
-            background-color: #25D366;
+            background-color: #25D366 !important;
+            background: #25D366 !important;
             color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
             font-weight: 800;
             font-size: 13px;
             border: none;
@@ -297,25 +303,27 @@
             justify-content: center;
             gap: 8px;
             text-decoration: none;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
         }
 
         .btn-catalog {
             width: 100%;
             padding: 13px;
             border-radius: 12px;
-            background-color: #1c3524;
+            background-color: #1c3524 !important;
+            background: #1c3524 !important;
+            border: 1px solid rgba(194, 155, 56, 0.5) !important;
             color: #ffffff !important;
+            -webkit-text-fill-color: #ffffff !important;
             font-weight: 800;
             font-size: 13px;
-            border: none;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
             text-decoration: none;
-            box-shadow: 0 4px 12px rgba(28, 53, 36, 0.3);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
         }
 
         .btn-row {
@@ -327,9 +335,11 @@
             flex: 1;
             padding: 10px;
             border-radius: 10px;
-            background-color: #ffffff;
-            border: 1px solid #d1d5db;
-            color: #374151 !important;
+            background-color: #1c3524 !important;
+            background: #1c3524 !important;
+            border: 1px solid rgba(194, 155, 56, 0.4) !important;
+            color: #e6cb7a !important;
+            -webkit-text-fill-color: #e6cb7a !important;
             font-weight: 700;
             font-size: 11px;
             cursor: pointer;
@@ -340,13 +350,15 @@
         }
 
         .card-footer {
-            background-color: #f3f4f6;
+            background-color: #0e1d13 !important;
+            background: #0e1d13 !important;
             padding: 10px;
             text-align: center;
             font-size: 10px;
             font-weight: 600;
-            color: #6b7280;
-            border-top: 1px solid #e5e7eb;
+            color: #a0aec0 !important;
+            -webkit-text-fill-color: #a0aec0 !important;
+            border-top: 1px solid rgba(194, 155, 56, 0.2);
         }
 
         /* Modal QR Overlay */
@@ -365,7 +377,9 @@
             display: none !important;
         }
         .modal-box {
-            background-color: #ffffff;
+            background-color: #ffffff !important;
+            background: #ffffff !important;
+            color: #1f2937 !important;
             border-radius: 20px;
             width: 100%;
             max-width: 360px;
@@ -373,6 +387,7 @@
             text-align: center;
             position: relative;
             box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            forced-color-adjust: none !important;
         }
         .modal-close-btn {
             position: absolute;
@@ -381,10 +396,10 @@
             width: 32px;
             height: 32px;
             border-radius: 50%;
-            background-color: #f3f4f6;
+            background-color: #f3f4f6 !important;
             border: none;
             font-size: 16px;
-            color: #4b5563;
+            color: #4b5563 !important;
             cursor: pointer;
             display: flex;
             align-items: center;
@@ -394,28 +409,31 @@
             font-family: 'Playfair Display', serif;
             font-size: 20px;
             font-weight: 700;
-            color: #1c3524;
+            color: #1c3524 !important;
+            -webkit-text-fill-color: #1c3524 !important;
             margin-bottom: 4px;
         }
         .modal-desc {
             font-size: 12px;
-            color: #6b7280;
+            color: #6b7280 !important;
+            -webkit-text-fill-color: #6b7280 !important;
             margin-bottom: 16px;
         }
         .qr-canvas-box {
             display: flex;
             justify-content: center;
             padding: 16px;
-            background-color: #f9fafb;
+            background-color: #f9fafb !important;
             border-radius: 12px;
             border: 1px solid #e5e7eb;
             margin-bottom: 14px;
         }
         .qr-url-badge {
             font-size: 11px;
-            color: #4b5563;
+            color: #4b5563 !important;
+            -webkit-text-fill-color: #4b5563 !important;
             word-break: break-all;
-            background-color: #f3f4f6;
+            background-color: #f3f4f6 !important;
             padding: 8px;
             border-radius: 8px;
             margin-bottom: 16px;
@@ -545,13 +563,13 @@
             <div class="btn-row">
                 <!-- Button 4: Share Card -->
                 <button onclick="shareDigitalCard()" class="btn-secondary">
-                    <i class="fa-solid fa-share-nodes" style="color: #c29b38;"></i>
+                    <i class="fa-solid fa-share-nodes"></i>
                     <span>Compartir</span>
                 </button>
 
                 <!-- Button 5: View QR Code Modal -->
                 <button onclick="toggleQRModal()" class="btn-secondary">
-                    <i class="fa-solid fa-qrcode" style="color: #c29b38;"></i>
+                    <i class="fa-solid fa-qrcode"></i>
                     <span>Ver QR</span>
                 </button>
             </div>
