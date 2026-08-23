@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth bg-gray-900 min-h-screen">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -10,7 +10,7 @@
     <meta name="color-scheme" content="light">
     <meta name="theme-color" content="#1c3524">
     
-    <!-- Open Graph Meta Tags for WhatsApp & Social Sharing -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Francisco Reynoso | Asesor Inmobiliario">
     <meta property="og:description" content="¡Transformamos tus sueños en tu nuevo hogar! Guarda mi contacto de inmediato.">
@@ -19,249 +19,546 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
     
     <!-- FontAwesome 6 icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- QRCodeJS Library for HD QR Code Generation -->
+    
+    <!-- QRCodeJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            green: '#1c3524',      /* Deep Forest Green */
-                            greenDark: '#132619',
-                            greenLight: '#264832',
-                            gold: '#c29b38',       /* Muted Ochre / Gold */
-                            goldHover: '#a8832a',
-                            goldLight: '#e6cb7a',
-                            cream: '#faf8f3',
-                            whatsapp: '#25D366'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                        serif: ['"Playfair Display"', 'serif']
-                    },
-                    boxShadow: {
-                        'gold-glow': '0 0 25px rgba(194, 155, 56, 0.45)',
-                        'card-shadow': '0 25px 60px -15px rgba(0, 0, 0, 0.5)'
-                    }
-                }
-            }
-        }
-    </script>
-
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         :root {
             color-scheme: light !important;
         }
-        body {
-            background-color: #0f172a;
-            font-family: 'Plus Jakarta Sans', sans-serif;
+        html, body {
+            background-color: #0f172a !important;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+            color: #1f2937 !important;
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 12px;
             -webkit-tap-highlight-color: transparent;
         }
-        .gold-border-gradient {
+
+        /* Main Card Container */
+        .card-container {
+            width: 100%;
+            max-width: 380px;
+            background-color: #ffffff !important;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(194, 155, 56, 0.4);
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            position: relative;
+        }
+
+        /* Top Header Cover */
+        .card-header {
+            position: relative;
+            height: 140px;
+            background-color: #1c3524 !important;
+            background-image: radial-gradient(rgba(194, 155, 56, 0.25) 1px, transparent 0);
+            background-size: 16px 16px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+        .gold-top-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #c29b38 0%, #e6cb7a 50%, #c29b38 100%);
+        }
+
+        /* Profile Avatar Frame */
+        .avatar-wrapper {
+            position: absolute;
+            bottom: -50px;
+            z-index: 10;
+        }
+        .avatar-gold-ring {
             background: linear-gradient(135deg, #dfc578 0%, #c29b38 50%, #8c6a1d 100%);
             padding: 4px;
+            border-radius: 50%;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.35);
         }
-        .gold-text-gradient {
+        .avatar-img {
+            width: 124px;
+            height: 124px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top center;
+            border: 3px solid #ffffff;
+            display: block;
+            background-color: #f3f4f6;
+        }
+
+        /* Card Content */
+        .card-body {
+            padding: 62px 24px 20px 24px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        .brand-emblem {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .brand-logo-img {
+            width: 26px;
+            height: 26px;
+            object-fit: contain;
+        }
+        .brand-name-text {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #1c3524;
+        }
+
+        .agent-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            font-weight: 800;
             background: linear-gradient(135deg, #b88e2c 0%, #d4b45d 50%, #94711f 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            color: #c29b38;
+            line-height: 1.25;
         }
-        .pattern-bg {
-            background-color: #1c3524;
-            background-image: radial-gradient(rgba(194, 155, 56, 0.15) 1px, transparent 0);
+        .agent-title {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #1c3524;
+            margin-top: 4px;
+        }
+        .agent-slogan {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 14px;
+            color: #264832;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .gold-divider {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #c29b38, transparent);
+            margin: 16px auto 0 auto;
+        }
+
+        /* Contact Details Block */
+        .contact-block {
+            background-color: #1c3524 !important;
+            background-image: radial-gradient(rgba(194, 155, 56, 0.18) 1px, transparent 0);
             background-size: 16px 16px;
+            padding: 24px 20px;
+            border-top: 2px solid rgba(194, 155, 56, 0.4);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            color: #ffffff !important;
+            transition: transform 0.2s ease;
+        }
+        .contact-row:hover {
+            transform: translateX(4px);
+        }
+        .icon-pill {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #dfc578 0%, #c29b38 50%, #8c6a1d 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1c3524 !important;
+            font-size: 15px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            overflow: hidden;
+        }
+        .contact-label {
+            font-size: 10px;
+            color: #dfc578;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .contact-value {
+            font-size: 13px;
+            font-weight: 600;
+            color: #ffffff !important;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .contact-value-bold {
+            font-size: 15px;
+            font-weight: 800;
+            color: #ffffff !important;
+        }
+
+        /* Action Buttons Block */
+        .actions-block {
+            padding: 18px 20px;
+            background-color: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            background-color: #c29b38;
+            color: #ffffff !important;
+            font-weight: 800;
+            font-size: 13px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(194, 155, 56, 0.35);
+            transition: background-color 0.2s ease;
+        }
+        .btn-primary:hover {
+            background-color: #a8832a;
+        }
+
+        .btn-whatsapp {
+            width: 100%;
+            padding: 13px;
+            border-radius: 12px;
+            background-color: #25D366;
+            color: #ffffff !important;
+            font-weight: 800;
+            font-size: 13px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-catalog {
+            width: 100%;
+            padding: 13px;
+            border-radius: 12px;
+            background-color: #1c3524;
+            color: #ffffff !important;
+            font-weight: 800;
+            font-size: 13px;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(28, 53, 36, 0.3);
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 2px;
+        }
+        .btn-secondary {
+            flex: 1;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            border: 1px solid #d1d5db;
+            color: #374151 !important;
+            font-weight: 700;
+            font-size: 11px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .card-footer {
+            background-color: #f3f4f6;
+            padding: 10px;
+            text-align: center;
+            font-size: 10px;
+            font-weight: 600;
+            color: #6b7280;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        /* Modal QR Overlay */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background-color: rgba(0,0,0,0.85);
+            backdrop-filter: blur(4px);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+        .modal-overlay.hidden {
+            display: none !important;
+        }
+        .modal-box {
+            background-color: #ffffff;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 360px;
+            padding: 24px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        .modal-close-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #f3f4f6;
+            border: none;
+            font-size: 16px;
+            color: #4b5563;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #1c3524;
+            margin-bottom: 4px;
+        }
+        .modal-desc {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 16px;
+        }
+        .qr-canvas-box {
+            display: flex;
+            justify-content: center;
+            padding: 16px;
+            background-color: #f9fafb;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            margin-bottom: 14px;
+        }
+        .qr-url-badge {
+            font-size: 11px;
+            color: #4b5563;
+            word-break: break-all;
+            background-color: #f3f4f6;
+            padding: 8px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-weight: 500;
         }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center p-3 sm:p-6 bg-slate-950">
+<body>
 
     <!-- MAIN DIGITAL CARD CONTAINER -->
-    <main class="w-full max-w-sm sm:max-w-md bg-white rounded-3xl overflow-hidden shadow-card-shadow border border-brand-gold/30 flex flex-col relative my-auto">
+    <main class="card-container">
         
         <!-- TOP COVER HEADER WITH PROFILE PICTURE OVERLAY -->
-        <div class="relative pattern-bg h-36 sm:h-44 flex justify-center items-end pb-0">
-            <!-- Decorative Gold Accent Strip -->
-            <div class="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-brand-gold via-brand-goldLight to-brand-gold"></div>
+        <div class="card-header">
+            <div class="gold-top-bar"></div>
 
-            <!-- Profile Picture Circle with Metallic Gold Ring -->
-            <div class="relative translate-y-12 sm:translate-y-16 z-20">
-                <div class="gold-border-gradient rounded-full shadow-2xl">
-                    <div class="w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden border-2 border-white bg-gray-100">
-                        <img src="Frank.jpg" alt="Francisco Reynoso - Asesor Inmobiliario" class="w-full h-full object-cover object-top">
-                    </div>
+            <!-- Profile Avatar Circle -->
+            <div class="avatar-wrapper">
+                <div class="avatar-gold-ring">
+                    <img src="Frank.jpg" alt="Francisco Reynoso - Asesor Inmobiliario" class="avatar-img">
                 </div>
             </div>
         </div>
 
         <!-- MAIN CARD BODY CONTENT -->
-        <div class="pt-16 sm:pt-20 px-6 pb-6 text-center bg-white flex flex-col items-center">
+        <div class="card-body">
             
             <!-- Logo Emblem -->
-            <div class="flex items-center justify-center gap-2 mb-3">
-                <div class="w-8 h-8 rounded-full bg-brand-green/10 flex items-center justify-center p-1">
-                    <img src="logo_exact.svg" alt="Mexicali Home Logo" class="w-full h-full object-contain">
-                </div>
-                <span class="text-xs font-extrabold uppercase tracking-widest text-brand-green">Mexicali Home</span>
+            <div class="brand-emblem">
+                <img src="logo_exact.svg" alt="Mexicali Home Logo" class="brand-logo-img">
+                <span class="brand-name-text">Mexicali Home</span>
             </div>
 
             <!-- Agent Name -->
-            <h1 class="font-serif font-extrabold text-2xl sm:text-3xl tracking-tight gold-text-gradient">
-                Francisco Reynoso
-            </h1>
+            <h1 class="agent-name">Francisco Reynoso</h1>
 
             <!-- Professional Subtitle -->
-            <h2 class="text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-brand-green mt-1">
-                ASESOR INMOBILIARIO
-            </h2>
+            <h2 class="agent-title">ASESOR INMOBILIARIO</h2>
 
             <!-- Slogan -->
-            <p class="font-serif italic text-sm sm:text-base text-brand-greenLight font-semibold mt-3 max-w-xs">
-                "¡Transformamos tus sueños en tu nuevo hogar!"
-            </p>
+            <p class="agent-slogan">"¡Transformamos tus sueños en tu nuevo hogar!"</p>
 
-            <!-- Decorative Gold Line -->
-            <div class="w-24 h-0.5 bg-gradient-to-r from-transparent via-brand-gold to-transparent my-5"></div>
+            <!-- Gold Line -->
+            <div class="gold-divider"></div>
         </div>
 
         <!-- CONTACT DETAILS BLOCK (GREEN CONTAINER WITH GOLD ICON PILLARS) -->
-        <div class="pattern-bg p-6 text-white border-t-2 border-brand-gold/40 flex flex-col space-y-3.5">
+        <div class="contact-block">
             
             <!-- 1. Teléfono -->
-            <a href="tel:526867013628" class="flex items-center gap-3.5 group hover:translate-x-1 transition-transform">
-                <div class="w-10 h-10 rounded-full gold-border-gradient flex items-center justify-center text-brand-green font-bold text-sm shadow-md shrink-0">
+            <a href="tel:526867013628" class="contact-row">
+                <div class="icon-pill">
                     <i class="fa-solid fa-phone"></i>
                 </div>
-                <div class="flex flex-col text-left">
-                    <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold">Teléfono / WhatsApp</span>
-                    <span class="text-sm sm:text-base font-extrabold tracking-wide text-white group-hover:text-brand-goldLight transition-colors">
-                        (686) 701 36 28
-                    </span>
+                <div class="contact-info">
+                    <span class="contact-label">Teléfono / WhatsApp</span>
+                    <span class="contact-value-bold">(686) 701 36 28</span>
                 </div>
             </a>
 
             <!-- 2. Facebook -->
-            <a href="https://www.facebook.com/francisco.javier.reynoso.hernandez.2025" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 group hover:translate-x-1 transition-transform">
-                <div class="w-10 h-10 rounded-full gold-border-gradient flex items-center justify-center text-brand-green font-bold text-sm shadow-md shrink-0">
+            <a href="https://www.facebook.com/francisco.javier.reynoso.hernandez.2025" target="_blank" rel="noopener noreferrer" class="contact-row">
+                <div class="icon-pill">
                     <i class="fa-brands fa-facebook-f"></i>
                 </div>
-                <div class="flex flex-col text-left">
-                    <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold">Facebook</span>
-                    <span class="text-xs sm:text-sm font-semibold text-white group-hover:text-brand-goldLight transition-colors">
-                        Francisco Reynoso
-                    </span>
+                <div class="contact-info">
+                    <span class="contact-label">Facebook</span>
+                    <span class="contact-value">Francisco Reynoso</span>
                 </div>
             </a>
 
             <!-- 3. Página Web -->
-            <a href="https://reynoso-inmobiliaria.vercel.app/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3.5 group hover:translate-x-1 transition-transform">
-                <div class="w-10 h-10 rounded-full gold-border-gradient flex items-center justify-center text-brand-green font-bold text-sm shadow-md shrink-0">
+            <a href="https://reynoso-inmobiliaria.vercel.app/" target="_blank" rel="noopener noreferrer" class="contact-row">
+                <div class="icon-pill">
                     <i class="fa-solid fa-globe"></i>
                 </div>
-                <div class="flex flex-col text-left overflow-hidden">
-                    <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold">Página Web</span>
-                    <span class="text-xs sm:text-sm font-semibold text-white group-hover:text-brand-goldLight transition-colors truncate">
-                        reynoso-inmobiliaria.vercel.app
-                    </span>
+                <div class="contact-info">
+                    <span class="contact-label">Página Web</span>
+                    <span class="contact-value">reynoso-inmobiliaria.vercel.app</span>
                 </div>
             </a>
 
             <!-- 4. Correo -->
-            <a href="mailto:mexicalihome.asociados@gmail.com" class="flex items-center gap-3.5 group hover:translate-x-1 transition-transform">
-                <div class="w-10 h-10 rounded-full gold-border-gradient flex items-center justify-center text-brand-green font-bold text-sm shadow-md shrink-0">
+            <a href="mailto:mexicalihome.asociados@gmail.com" class="contact-row">
+                <div class="icon-pill">
                     <i class="fa-solid fa-envelope"></i>
                 </div>
-                <div class="flex flex-col text-left overflow-hidden">
-                    <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold">Correo Electrónico</span>
-                    <span class="text-xs sm:text-sm font-semibold text-white group-hover:text-brand-goldLight transition-colors truncate">
-                        mexicalihome.asociados@gmail.com
-                    </span>
+                <div class="contact-info">
+                    <span class="contact-label">Correo Electrónico</span>
+                    <span class="contact-value">mexicalihome.asociados@gmail.com</span>
                 </div>
             </a>
 
             <!-- 5. Ubicación -->
-            <div class="flex items-center gap-3.5">
-                <div class="w-10 h-10 rounded-full gold-border-gradient flex items-center justify-center text-brand-green font-bold text-sm shadow-md shrink-0">
+            <div class="contact-row">
+                <div class="icon-pill">
                     <i class="fa-solid fa-location-dot"></i>
                 </div>
-                <div class="flex flex-col text-left">
-                    <span class="text-[10px] text-brand-gold uppercase tracking-wider font-semibold">Ubicación</span>
-                    <span class="text-xs sm:text-sm font-semibold text-white">
-                        Mexicali, B.C.
-                    </span>
+                <div class="contact-info">
+                    <span class="contact-label">Ubicación</span>
+                    <span class="contact-value">Mexicali, B.C.</span>
                 </div>
             </div>
         </div>
 
-        <!-- ACTION BUTTONS SECTION -->
-        <div class="p-5 bg-gray-50 border-t border-gray-200 flex flex-col space-y-2.5">
+        <!-- ACTION BUTTONS BLOCK -->
+        <div class="actions-block">
             
             <!-- Button 1: Save Contact (VCF Download) -->
-            <button onclick="downloadVCard()" class="w-full py-3.5 rounded-xl bg-brand-gold text-white font-bold text-sm tracking-wide shadow-md hover:bg-brand-goldHover transition-all flex items-center justify-center gap-2.5 transform active:scale-95">
-                <i class="fa-solid fa-address-card text-base"></i>
+            <button onclick="downloadVCard()" class="btn-primary">
+                <i class="fa-solid fa-address-card"></i>
                 <span>Guardar en Contactos del Celular</span>
             </button>
 
             <!-- Button 2: WhatsApp Direct -->
-            <a href="https://wa.me/526867013628?text=Hola%20Francisco,%20escane%C3%A9%20tu%20tarjeta%20digital%20y%20quisiera%20solicitar%20asesor%C3%ADa%20inmobiliaria." target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-brand-whatsapp text-white font-bold text-sm shadow hover:bg-emerald-600 transition-all flex items-center justify-center gap-2 text-center">
-                <i class="fa-brands fa-whatsapp text-lg"></i>
+            <a href="https://wa.me/526867013628?text=Hola%20Francisco,%20escane%C3%A9%20tu%20tarjeta%20digital%20y%20quisiera%20solicitar%20asesor%C3%ADa%20inmobiliaria." target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
                 <span>Enviar WhatsApp Directo</span>
             </a>
 
             <!-- Button 3: View Catalog -->
-            <a href="https://reynoso-inmobiliaria.vercel.app/" target="_blank" rel="noopener noreferrer" class="w-full py-3 rounded-xl bg-brand-green text-white font-bold text-sm shadow hover:bg-brand-greenDark transition-all flex items-center justify-center gap-2 text-center">
-                <i class="fa-solid fa-house-circle-check text-base"></i>
+            <a href="https://reynoso-inmobiliaria.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-catalog">
+                <i class="fa-solid fa-house-circle-check"></i>
                 <span>Ver Catálogo de Propiedades</span>
             </a>
 
-            <div class="flex gap-2 pt-1">
+            <div class="btn-row">
                 <!-- Button 4: Share Card -->
-                <button onclick="shareDigitalCard()" class="flex-1 py-2.5 rounded-lg bg-white border border-gray-300 text-gray-700 font-semibold text-xs hover:bg-gray-100 transition-colors flex items-center justify-center gap-1.5">
-                    <i class="fa-solid fa-share-nodes text-brand-gold"></i>
-                    <span>Compartir Tarjeta</span>
+                <button onclick="shareDigitalCard()" class="btn-secondary">
+                    <i class="fa-solid fa-share-nodes" style="color: #c29b38;"></i>
+                    <span>Compartir</span>
                 </button>
 
                 <!-- Button 5: View QR Code Modal -->
-                <button onclick="toggleQRModal()" class="flex-1 py-2.5 rounded-lg bg-white border border-gray-300 text-gray-700 font-semibold text-xs hover:bg-gray-100 transition-colors flex items-center justify-center gap-1.5">
-                    <i class="fa-solid fa-qrcode text-brand-gold"></i>
-                    <span>Ver Código QR</span>
+                <button onclick="toggleQRModal()" class="btn-secondary">
+                    <i class="fa-solid fa-qrcode" style="color: #c29b38;"></i>
+                    <span>Ver QR</span>
                 </button>
             </div>
         </div>
 
         <!-- FOOTER COPY -->
-        <div class="bg-gray-100 py-3 text-center text-[10px] font-semibold text-gray-500 border-t border-gray-200">
+        <div class="card-footer">
             Reynoso & Asociados • Mexicali Home © 2026
         </div>
     </main>
 
     <!-- QR CODE MODAL FOR PRINTING & SHARING -->
-    <div id="qr-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-sm w-full p-6 text-center shadow-2xl relative">
-            <button onclick="toggleQRModal()" class="absolute top-3 right-3 w-8 h-8 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center hover:bg-red-500 hover:text-white transition-colors">
+    <div id="qr-modal" class="modal-overlay hidden">
+        <div class="modal-box">
+            <button onclick="toggleQRModal()" class="modal-close-btn" aria-label="Cerrar">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             
-            <h3 class="font-serif font-bold text-xl text-brand-green mb-1">Código QR de la Tarjeta</h3>
-            <p class="text-xs text-gray-500 mb-4">Escanea o descarga este QR para colocarlo en tu tarjeta física impresa.</p>
+            <h3 class="modal-title">Código QR de la Tarjeta</h3>
+            <p class="modal-desc">Escanea o descarga este QR para colocarlo en tu tarjeta física impresa.</p>
 
-            <div class="flex justify-center p-4 bg-gray-50 rounded-xl border border-gray-200 shadow-inner mb-4">
+            <div class="qr-canvas-box">
                 <div id="qrcode-canvas"></div>
             </div>
 
-            <p class="text-[11px] text-gray-600 font-medium break-all mb-4 bg-gray-100 p-2 rounded" id="qr-url-text"></p>
+            <p class="qr-url-badge" id="qr-url-text"></p>
 
-            <button onclick="downloadQRCodeImage()" class="w-full py-2.5 rounded-xl bg-brand-gold text-white font-bold text-xs shadow hover:bg-brand-goldHover transition-colors flex items-center justify-center gap-2">
+            <button onclick="downloadQRCodeImage()" class="btn-primary" style="padding: 10px; font-size: 12px;">
                 <i class="fa-solid fa-download"></i>
                 <span>Descargar Código QR (Imagen HD)</span>
             </button>
@@ -327,8 +624,8 @@ END:VCARD`;
                 
                 new QRCode(document.getElementById('qrcode-canvas'), {
                     text: targetUrl,
-                    width: 200,
-                    height: 200,
+                    width: 180,
+                    height: 180,
                     colorDark : "#1c3524",
                     colorLight : "#ffffff",
                     correctLevel : QRCode.CorrectLevel.H
