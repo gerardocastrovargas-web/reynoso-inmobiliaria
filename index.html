@@ -362,162 +362,178 @@
                 <!-- Property Cards Grid (4 cards responsive layout) -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                     
-                    <!-- Tarjeta 1: Modelo ALEXANDRA -->
+                    <!-- Tarjeta 1: Corceles Residencial -->
                     <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover hover:border-brand-gold/40 transition-all duration-300 flex flex-col group">
                         <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
-                            <img src="card_alexandra.jpg" alt="Modelo ALEXANDRA - Casa de Una Planta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <img src="corceles_facade.jpg" alt="Corceles Residencial - Residencia Privada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                             <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
-                                NUEVO
+                                EXCLUSIVA
+                            </span>
+                            <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 5 Fotos
                             </span>
                         </div>
                         <div class="p-5 flex flex-col flex-grow justify-between">
                             <div>
                                 <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
-                                    Modelo ALEXANDRA - Casa de Una Planta
+                                    Corceles Residencial
                                 </h3>
                                 <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
                                     <i class="fa-solid fa-location-dot text-brand-gold"></i>
-                                    <span>Samara Residencial Boutique</span>
+                                    <span>Privada con Casa Club & Alberca</span>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-bed text-brand-gold"></i>
+                                        <span>5 Recámaras</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-bath text-brand-gold"></i>
+                                        <span>4 Baños Completo</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                    $3,000,000 <span class="text-xs font-sans font-semibold text-gray-500">MXN (Avalúo)</span>
+                                </div>
+                            </div>
+
+                            <button onclick="openPropertyModal('Corceles Residencial - Residencia Privada', '$3,000,000 MXN', '5 Recámaras • 4 Baños • Mármol', 'Corceles Residencial, Mexicali', ['corceles_facade.jpg', 'corceles_pool.jpg', 'corceles_dining.jpg', 'corceles_kitchen.jpg', 'corceles_street.jpg'], 'Exclusiva residencia en Fraccionamiento Privado Corceles Residencial con acceso a Casa Club, parque recreativo y alberca. Cuenta con 5 recámaras, 4 baños completos, 3 cocinas, sala, comedor, cuarto de lavado y elegantes acabados en pisos de mármol. Valor de avalúo: $3,000,000 MXN.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                                <span>Ver Más y Galería</span>
+                                <i class="fa-solid fa-images text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2: Terreno Área Industrial Céntrico -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover hover:border-brand-gold/40 transition-all duration-300 flex flex-col group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                            <img src="terreno_industrial_map.jpg" alt="Terreno Área Industrial Céntrico en Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                                INDUSTRIAL
+                            </span>
+                            <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 3 Fotos
+                            </span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                    Terreno Industrial Céntrico
+                                </h3>
+                                <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                    <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                    <span>A 200m de Calzada Terán Terán</span>
                                 </div>
 
                                 <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
                                     <div class="flex items-center gap-1.5">
                                         <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
-                                        <span>210 m²</span>
+                                        <span>3,687 m²</span>
                                     </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-bolt text-brand-gold"></i>
+                                        <span>Luz Trifásica</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                    $80 <span class="text-xs font-sans font-semibold text-gray-500">USD / m² (o mejor oferta)</span>
+                                </div>
+                            </div>
+
+                            <button onclick="openPropertyModal('Terreno Área Industrial Céntrico', '$80 USD / m²', '3,687 m² • Luz Trifásica • Pavimentado', 'A 200m de Calzada Terán Terán, Mexicali', ['terreno_industrial_map.jpg', 'terreno_industrial_street.jpg', 'terreno_industrial_aerial.jpg'], 'Terreno de uso industrial altamente céntrico con superficie de 3,687 m². Ubicado a solo 200 metros de la Calzada Héctor Terán Terán (atrás de Industrias Maran) y a 400 metros de la carretera a San Felipe. Ideal para instalación de industria, almacén o taller industrial. Cuenta con acceso a energía eléctrica trifásica y servicio de pavimento sobre dos avenidas principales de acceso. Precio de venta: $80 USD / m² (o mejor oferta).')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                                <span>Ver Más y Galería</span>
+                                <i class="fa-solid fa-images text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Residencia en Fracc. Villafontana -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover hover:border-brand-gold/40 transition-all duration-300 flex flex-col group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                            <img src="villafontana_facade.jpg" alt="Residencia en Fracc. Villafontana Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                                RESIDENCIAL
+                            </span>
+                            <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 4 Fotos
+                            </span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                    Residencia Fracc. Villafontana
+                                </h3>
+                                <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                    <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                    <span>Fracc. Villafontana, Mexicali</span>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-house-chimney text-brand-gold"></i>
+                                        <span>2 Plantas</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-car text-brand-gold"></i>
+                                        <span>Cochera Techada</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                    $6,350,000 <span class="text-xs font-sans font-semibold text-gray-500">MXN</span>
+                                </div>
+                            </div>
+
+                            <button onclick="openPropertyModal('Residencia en Fracc. Villafontana', '$6,350,000 MXN', '2 Plantas • Cochera Techada • Patio', 'Fracc. Villafontana, Mexicali', ['villafontana_facade.jpg', 'villafontana_kitchen.jpg', 'villafontana_patio1.jpg', 'villafontana_patio2.jpg'], 'Hermosa y amplia residencia de dos plantas ubicada en el prestigioso Fraccionamiento Villafontana. Cuenta con fachada contemporánea, portón eléctrico con cochera techada, cocina integral de madera equipada con campana de acero, amplios espacios de estancia y un gran patio trasero con área de convivencia. Ubicación estratégica en Mexicali. Precio de venta: $6,350,000.00 MXN.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                                <span>Ver Más y Galería</span>
+                                <i class="fa-solid fa-images text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4: Casa en Venta - Colonia Benito Juárez -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover hover:border-brand-gold/40 transition-all duration-300 flex flex-col group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                            <img src="benitojuarez_facade.jpg" alt="Casa en Venta Colonia Benito Juárez Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                                DESTAQUE
+                            </span>
+                            <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 5 Fotos
+                            </span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                    Casa Col. Benito Juárez
+                                </h3>
+                                <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                    <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                    <span>Col. Benito Juárez, Mexicali</span>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
                                     <div class="flex items-center gap-1.5">
                                         <i class="fa-solid fa-bed text-brand-gold"></i>
                                         <span>3 Recámaras</span>
                                     </div>
-                                </div>
-
-                                <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
-                                    $750,000 <span class="text-xs font-sans font-semibold text-gray-500">USD</span>
-                                </div>
-                            </div>
-
-                            <button onclick="openPropertyModal('Modelo ALEXANDRA - Casa de Una Planta', '$750,000 USD', '210 m²', 'Samara Residencial Boutique', 'card_alexandra.jpg', 'Amplia residencia de una planta con acabados de lujo, patio privado y diseño moderno pensado para la comodidad máxima de tu familia.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center">
-                                Ver Más
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta 2: Modelo Eliza -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover hover:border-brand-gold/40 transition-all duration-300 flex flex-col group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
-                            <img src="card_eliza.jpg" alt="Modelo Eliza - Totalmente Amueblado" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
-                                NUEVO
-                            </span>
-                        </div>
-                        <div class="p-5 flex flex-col flex-grow justify-between">
-                            <div>
-                                <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
-                                    Modelo Eliza - Totalmente Amueblado
-                                </h3>
-                                <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
-                                    <i class="fa-solid fa-location-dot text-brand-gold"></i>
-                                    <span>Samara Residencial Boutique</span>
-                                </div>
-
-                                <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
                                     <div class="flex items-center gap-1.5">
-                                        <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
-                                        <span>195 m²</span>
-                                    </div>
-                                    <div class="flex items-center gap-1.5">
-                                        <i class="fa-solid fa-couch text-brand-gold"></i>
-                                        <span>Amueblada</span>
+                                        <i class="fa-solid fa-bath text-brand-gold"></i>
+                                        <span>2.5 Baños</span>
                                     </div>
                                 </div>
 
                                 <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
-                                    $820,000 <span class="text-xs font-sans font-semibold text-gray-500">USD</span>
+                                    $3,900,000 <span class="text-xs font-sans font-semibold text-gray-500">MXN</span>
                                 </div>
                             </div>
 
-                            <button onclick="openPropertyModal('Modelo Eliza - Totalmente Amueblado', '$820,000 USD', '195 m²', 'Samara Residencial Boutique', 'card_eliza.jpg', 'Hermosa residencia totalmente amueblada y lista para habitar con mobiliario contemporáneo de alta gama e iluminación cálida ambiental.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center">
-                                Ver Más
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta 3: Residencia ISABELLA -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover hover:border-brand-gold/40 transition-all duration-300 flex flex-col group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
-                            <img src="card_isabella.jpg" alt="Residencia ISABELLA - Vista al Atardecer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
-                                NUEVO
-                            </span>
-                        </div>
-                        <div class="p-5 flex flex-col flex-grow justify-between">
-                            <div>
-                                <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
-                                    Residencia ISABELLA - Vista al Atardecer
-                                </h3>
-                                <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
-                                    <i class="fa-solid fa-location-dot text-brand-gold"></i>
-                                    <span>Samara Residencial Boutique</span>
-                                </div>
-
-                                <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
-                                    <div class="flex items-center gap-1.5">
-                                        <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
-                                        <span>280 m²</span>
-                                    </div>
-                                    <div class="flex items-center gap-1.5">
-                                        <i class="fa-solid fa-building text-brand-gold"></i>
-                                        <span>2 Plantas</span>
-                                    </div>
-                                </div>
-
-                                <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
-                                    $910,000 <span class="text-xs font-sans font-semibold text-gray-500">USD</span>
-                                </div>
-                            </div>
-
-                            <button onclick="openPropertyModal('Residencia ISABELLA - Vista al Atardecer', '$910,000 USD', '280 m²', 'Samara Residencial Boutique', 'card_isabella.jpg', 'Espectacular residencia de dos plantas diseñada para conectar tu vida con el exterior, disfrutando los más bellos atardeceres en Mexicali.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center">
-                                Ver Más
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Tarjeta 4: Acceso Premier Samara -->
-                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover hover:border-brand-gold/40 transition-all duration-300 flex flex-col group">
-                        <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
-                            <img src="card_acceso.jpg" alt="Acceso Premier Samara" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
-                                NUEVO
-                            </span>
-                        </div>
-                        <div class="p-5 flex flex-col flex-grow justify-between">
-                            <div>
-                                <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
-                                    Acceso Premier Samara
-                                </h3>
-                                <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
-                                    <i class="fa-solid fa-location-dot text-brand-gold"></i>
-                                    <span>Samara Residencial Boutique</span>
-                                </div>
-
-                                <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
-                                    <div class="flex items-center gap-1.5">
-                                        <i class="fa-solid fa-vector-square text-brand-gold"></i>
-                                        <span>450 m²</span>
-                                    </div>
-                                    <div class="flex items-center gap-1.5">
-                                        <i class="fa-solid fa-shield-cat text-brand-gold"></i>
-                                        <span>Lote Premium</span>
-                                    </div>
-                                </div>
-
-                                <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
-                                    $350,000 <span class="text-xs font-sans font-semibold text-gray-500">USD</span>
-                                </div>
-                            </div>
-
-                            <button onclick="openPropertyModal('Acceso Premier Samara', '$350,000 USD', '450 m²', 'Samara Residencial Boutique', 'card_acceso.jpg', 'Lote de terreno residencial premium estratégicamente ubicado cerca de la caseta de acceso con seguridad controlada 24/7.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center">
-                                Ver Más
+                            <button onclick="openPropertyModal('Casa en Venta – Colonia Benito Juárez', '$3,900,000 MXN', '160 m² Terr. • 134 m² Const. • 3 Rec. • 2.5 Baños', 'Colonia Benito Juárez, Mexicali', ['benitojuarez_facade.jpg', 'benitojuarez_living.jpg', 'benitojuarez_interior.jpg', 'benitojuarez_bath.jpg', 'benitojuarez_patio.jpg'], 'Excelente oportunidad en una de las zonas más céntricas y convenientes de Mexicali. Esta hermosa propiedad en Colonia Benito Juárez combina comodidad, funcionalidad y excelentes acabados. Cuenta con 160 m² de terreno y 134 m² de construcción distribuidos en 3 recámaras (la principal con baño completo y clóset), 2.5 baños, cochera con portón eléctrico, cuarto de lavado, sistema de ductos en toda la casa, aislamiento térmico en todas las paredes, iluminación tipo spot, puertas de madera, piso de loseta y muebles de baño incluidos. Precio de venta: $3,900,000.00 MXN.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                                <span>Ver Más y Galería</span>
+                                <i class="fa-solid fa-images text-xs"></i>
                             </button>
                         </div>
                     </div>
@@ -712,21 +728,50 @@
     </a>
 
     <!-- ==========================================
-         MODAL DE DETALLE DE PROPIEDAD
+         MODAL DE DETALLE DE PROPIEDAD CON CARRUSEL DE FOTOS
     ========================================== -->
-    <div id="property-modal" class="fixed inset-0 z-50 hidden bg-black/70 backdrop-blur-sm flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all relative">
-            <button onclick="closePropertyModal()" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-black/50 text-white flex items-center justify-center hover:bg-black transition-colors">
-                <i class="fa-solid fa-xmark"></i>
+    <div id="property-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-5">
+        <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[92vh] overflow-y-auto shadow-2xl transform transition-all relative flex flex-col">
+            
+            <!-- Close Button -->
+            <button onclick="closePropertyModal()" class="absolute top-3 right-3 z-30 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-red-600 transition-colors shadow-lg" aria-label="Cerrar modal">
+                <i class="fa-solid fa-xmark text-lg"></i>
             </button>
-            <div class="relative h-64 sm:h-72 bg-gray-100">
-                <img id="modal-img" src="" alt="" class="w-full h-full object-cover">
-                <span class="absolute bottom-4 left-4 bg-brand-gold text-white text-xs font-bold px-3 py-1 rounded-md shadow">
-                    NUEVO
+
+            <!-- Carousel Display Container -->
+            <div class="relative w-full h-80 sm:h-[450px] bg-gray-950 flex items-center justify-center overflow-hidden shrink-0">
+                
+                <!-- Main Image displayed at real aspect ratio (object-contain) -->
+                <img id="modal-img" src="" alt="Fotografía de la propiedad" class="w-full h-full object-contain p-1 transition-all duration-300">
+                
+                <!-- Counter Badge -->
+                <span id="modal-img-counter" class="absolute top-3 left-3 z-20 bg-black/70 text-white text-xs font-bold px-3 py-1 rounded-full shadow backdrop-blur-sm">
+                    1 / 1
                 </span>
+
+                <!-- Expand / Real Size Button -->
+                <a id="modal-expand-btn" href="#" target="_blank" class="absolute bottom-3 right-3 z-20 bg-black/75 hover:bg-brand-gold text-white text-xs font-bold px-3 py-1.5 rounded-md shadow backdrop-blur-sm flex items-center gap-1.5 transition-colors" title="Abrir imagen en tamaño completo original">
+                    <i class="fa-solid fa-expand"></i>
+                    <span>Tamaño Completo</span>
+                </a>
+
+                <!-- Navigation Arrows -->
+                <button id="modal-prev-btn" onclick="prevModalImage()" class="absolute left-3 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold transition-all shadow-lg active:scale-95" aria-label="Imagen anterior">
+                    <i class="fa-solid fa-chevron-left text-lg"></i>
+                </button>
+                <button id="modal-next-btn" onclick="nextModalImage()" class="absolute right-3 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold transition-all shadow-lg active:scale-95" aria-label="Siguiente imagen">
+                    <i class="fa-solid fa-chevron-right text-lg"></i>
+                </button>
             </div>
-            <div class="p-6 sm:p-8 space-y-4">
-                <div class="flex justify-between items-start">
+
+            <!-- Thumbnail Selector Bar -->
+            <div id="modal-thumbnails-container" class="bg-gray-900 p-2 overflow-x-auto flex gap-2 border-t border-gray-800 shrink-0 select-none scrollbar-thin">
+                <!-- Dynamic thumbnails will be inserted here -->
+            </div>
+
+            <!-- Property Details Content -->
+            <div class="p-6 sm:p-8 space-y-4 flex-grow bg-white">
+                <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                     <div>
                         <h3 id="modal-title" class="font-serif font-bold text-2xl text-brand-green"></h3>
                         <p id="modal-location" class="text-sm font-medium text-gray-500 flex items-center gap-1.5 mt-1">
@@ -737,7 +782,7 @@
                     <div id="modal-price" class="text-2xl font-extrabold text-brand-gold font-serif"></div>
                 </div>
 
-                <div class="flex items-center gap-4 py-3 border-y border-gray-100 text-sm font-semibold text-gray-700">
+                <div class="flex items-center gap-6 py-3 border-y border-gray-100 text-sm font-semibold text-gray-700">
                     <div class="flex items-center gap-2">
                         <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
                         <span id="modal-area"></span>
@@ -750,12 +795,12 @@
 
                 <p id="modal-desc" class="text-sm text-gray-600 leading-relaxed"></p>
 
-                <div class="pt-4 flex gap-3">
+                <div class="pt-4 flex flex-col sm:flex-row gap-3">
                     <a id="modal-wa-btn" href="#" target="_blank" class="flex-1 py-3 bg-brand-whatsapp text-white text-center font-bold text-sm rounded-md shadow hover:bg-emerald-600 transition-colors flex items-center justify-center gap-2">
                         <i class="fa-brands fa-whatsapp text-lg"></i>
                         <span>Solicitar Informes por WhatsApp</span>
                     </a>
-                    <button onclick="closePropertyModal()" class="px-5 py-3 bg-gray-100 text-gray-700 font-semibold text-sm rounded-md hover:bg-gray-200 transition-colors">
+                    <button onclick="closePropertyModal()" class="px-6 py-3 bg-gray-100 text-gray-700 font-semibold text-sm rounded-md hover:bg-gray-200 transition-colors text-center">
                         Cerrar
                     </button>
                 </div>
@@ -780,24 +825,113 @@
             });
         });
 
-        // Modal Handler
-        function openPropertyModal(title, price, area, location, img, desc) {
+        // Carousel Modal Handler
+        let currentModalImages = [];
+        let currentModalIndex = 0;
+
+        function openPropertyModal(title, price, area, location, images, desc) {
             document.getElementById('modal-title').textContent = title;
             document.getElementById('modal-price').textContent = price;
             document.getElementById('modal-area').textContent = area;
             document.getElementById('modal-location').querySelector('span').textContent = location;
-            document.getElementById('modal-img').src = img;
             document.getElementById('modal-desc').textContent = desc;
+
+            // Handle single image or array of images
+            if (Array.isArray(images)) {
+                currentModalImages = images.length > 0 ? images : ['hero_bg.jpg'];
+            } else if (typeof images === 'string') {
+                currentModalImages = [images];
+            } else {
+                currentModalImages = ['hero_bg.jpg'];
+            }
+
+            currentModalIndex = 0;
+            updateModalCarousel();
 
             const waMsg = encodeURIComponent(`Hola, me interesa solicitar información sobre: ${title} (${price}) en ${location}.`);
             document.getElementById('modal-wa-btn').href = `https://wa.me/526867013628?text=${waMsg}`;
 
             document.getElementById('property-modal').classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function updateModalCarousel() {
+            if (currentModalImages.length === 0) return;
+
+            const modalImg = document.getElementById('modal-img');
+            const counter = document.getElementById('modal-img-counter');
+            const prevBtn = document.getElementById('modal-prev-btn');
+            const nextBtn = document.getElementById('modal-next-btn');
+            const thumbsContainer = document.getElementById('modal-thumbnails-container');
+
+            // Update main image source and expand link
+            modalImg.src = currentModalImages[currentModalIndex];
+            modalImg.alt = `Fotografía ${currentModalIndex + 1} de la propiedad`;
+            const expandBtn = document.getElementById('modal-expand-btn');
+            if (expandBtn) {
+                expandBtn.href = currentModalImages[currentModalIndex];
+            }
+
+            // Counter update
+            counter.textContent = `${currentModalIndex + 1} / ${currentModalImages.length}`;
+
+            // Show/Hide controls if only 1 image
+            if (currentModalImages.length <= 1) {
+                prevBtn.classList.add('hidden');
+                nextBtn.classList.add('hidden');
+                thumbsContainer.classList.add('hidden');
+            } else {
+                prevBtn.classList.remove('hidden');
+                nextBtn.classList.remove('hidden');
+                thumbsContainer.classList.remove('hidden');
+            }
+
+            // Render thumbnails
+            thumbsContainer.innerHTML = '';
+            currentModalImages.forEach((imgSrc, idx) => {
+                const thumb = document.createElement('img');
+                thumb.src = imgSrc;
+                thumb.className = `w-16 h-12 object-cover rounded-md cursor-pointer border-2 transition-all flex-shrink-0 ${
+                    idx === currentModalIndex ? 'border-brand-gold scale-105 opacity-100' : 'border-transparent opacity-60 hover:opacity-100'
+                }`;
+                thumb.onclick = () => {
+                    currentModalIndex = idx;
+                    updateModalCarousel();
+                };
+                thumbsContainer.appendChild(thumb);
+            });
+        }
+
+        function prevModalImage() {
+            if (currentModalImages.length <= 1) return;
+            currentModalIndex = (currentModalIndex - 1 + currentModalImages.length) % currentModalImages.length;
+            updateModalCarousel();
+        }
+
+        function nextModalImage() {
+            if (currentModalImages.length <= 1) return;
+            currentModalIndex = (currentModalIndex + 1) % currentModalImages.length;
+            updateModalCarousel();
         }
 
         function closePropertyModal() {
             document.getElementById('property-modal').classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
         }
+
+        // Keyboard navigation for modal
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('property-modal');
+            if (modal.classList.contains('hidden')) return;
+
+            if (e.key === 'ArrowLeft') {
+                prevModalImage();
+            } else if (e.key === 'ArrowRight') {
+                nextModalImage();
+            } else if (e.key === 'Escape') {
+                closePropertyModal();
+            }
+        });
 
         // Form Submit Handler
         function handleFormSubmit(event) {
