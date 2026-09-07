@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Video - Reynoso Inmobiliaria</title>
+    <meta name="description" content="Video de presentación de Reynoso Inmobiliaria">
+    <meta name="theme-color" content="#0f172a">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="video.other">
+    <meta property="og:title" content="Video Reynoso Inmobiliaria">
+    <meta property="og:description" content="Haz clic para reproducir el video en alta definición.">
+    <meta property="og:video" content="dreamina-2026-09-02-6240.mp4">
+    <meta property="og:video:type" content="video/mp4">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #0b0f19;
+            color: #f8fafc;
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px;
+        }
+        .header {
+            width: 100%;
+            max-width: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+        .logo-img {
+            height: 38px;
+            width: auto;
+            border-radius: 6px;
+        }
+        .brand-title {
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #aa7c11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .main-card {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(212, 175, 55, 0.25);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+        }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            aspect-ratio: 9/16;
+            max-height: 70vh;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 12px 12px 0 0;
+        }
+        .controls-bar {
+            padding: 16px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            background: rgba(15, 23, 42, 0.9);
+        }
+        .actions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn:active {
+            transform: scale(0.97);
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+            color: #0b0f19;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #e5be48 0%, #c9971c 100%);
+        }
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.08);
+            color: #f8fafc;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        .btn-full {
+            grid-column: span 2;
+        }
+        .footer {
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            padding: 12px 0;
+        }
+        .footer a {
+            color: #d4af37;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <a href="index.html" class="logo-container">
+            <img src="LOGO.jpg" alt="Reynoso Logo" class="logo-img" onerror="this.style.display='none'">
+            <span class="brand-title">REYNOSO INMOBILIARIA</span>
+        </a>
+        <a href="index.html" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.85rem;">
+            <i class="fa-solid fa-house"></i> Inicio
+        </a>
+    </header>
+
+    <main class="main-card">
+        <div class="video-wrapper">
+            <video id="player" controls playsinline preload="metadata" poster="Index.jpg">
+                <source src="dreamina-2026-09-02-6240.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+        <div class="controls-bar">
+            <div class="actions-grid">
+                <button class="btn btn-gold" onclick="togglePlay()">
+                    <i class="fa-solid fa-play" id="playIcon"></i> <span id="playText">Reproducir</span>
+                </button>
+                <button class="btn btn-outline" onclick="shareVideo()">
+                    <i class="fa-solid fa-share-nodes"></i> Compartir
+                </button>
+                <a href="dreamina-2026-09-02-6240.mp4" download="Video-Reynoso-Inmobiliaria.mp4" class="btn btn-outline btn-full">
+                    <i class="fa-solid fa-download"></i> Descargar Video MP4
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 Reynoso Inmobiliaria. Todos los derechos reservados.</p>
+        <p style="margin-top: 6px;"><a href="tarjeta.html"><i class="fa-solid fa-id-card"></i> Ver Tarjeta Digital</a></p>
+    </footer>
+
+    <script>
+        const video = document.getElementById('player');
+        const playIcon = document.getElementById('playIcon');
+        const playText = document.getElementById('playText');
+
+        function togglePlay() {
+            if (video.paused) {
+                video.play();
+                playIcon.className = 'fa-solid fa-pause';
+                playText.textContent = 'Pausar';
+            } else {
+                video.pause();
+                playIcon.className = 'fa-solid fa-play';
+                playText.textContent = 'Reproducir';
+            }
+        }
+
+        video.addEventListener('play', () => {
+            playIcon.className = 'fa-solid fa-pause';
+            playText.textContent = 'Pausar';
+        });
+
+        video.addEventListener('pause', () => {
+            playIcon.className = 'fa-solid fa-play';
+            playText.textContent = 'Reproducir';
+        });
+
+        async function shareVideo() {
+            if (navigator.share) {
+                try {
+                    await navigator.share({
+                        title: 'Video Reynoso Inmobiliaria',
+                        text: 'Mira este video de Reynoso Inmobiliaria',
+                        url: window.location.href
+                    });
+                } catch (err) {
+                    console.log('Error compartiendo:', err);
+                }
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('¡Enlace copiado al portapapeles!');
+            }
+        }
+    </script>
+</body>
+</html>
