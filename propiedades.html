@@ -165,13 +165,13 @@
                 <!-- Botones de Pestañas / Filtros -->
                 <div class="flex flex-wrap items-center justify-center gap-2 w-full md:w-auto">
                     <button onclick="filterProperties('todos')" id="filter-todos" class="filter-btn filter-btn-active px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider border border-gray-200 transition-all">
-                        Todos (<span id="count-todos">6</span>)
+                        Todos (<span id="count-todos">7</span>)
                     </button>
                     <button onclick="filterProperties('disponible')" id="filter-disponible" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
                         🟢 Disponibles (<span id="count-disponible">5</span>)
                     </button>
                     <button onclick="filterProperties('vendida')" id="filter-vendida" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
-                        🏷️ Vendidas (<span id="count-vendida">1</span>)
+                        🏷️ Vendidas (<span id="count-vendida">2</span>)
                     </button>
                     <button onclick="filterProperties('residencial')" id="filter-residencial" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
                         🏠 Residencial
@@ -448,6 +448,55 @@
                         </div>
 
                         <button onclick="openPropertyModal('Residencial Barcelona – Privada Miró (VENDIDA)', '$1,300,000 MXN', '2 Habitaciones • 1 Baño • Cocina Integral • 2 AC', 'Residencial Barcelona, Privada Miró, Mexicali, B.C.', ['barcelona_01.jpg', 'barcelona_02.jpg', 'barcelona_03.jpg', 'barcelona_04.jpg', 'barcelona_05.jpg'], 'Excelente oportunidad de inversión vendida en Residencial Barcelona – Privada Miró. Cómoda y funcional propiedad residencial en ambiente familiar. Cuenta con 2 habitaciones, 1 baño completo, cocina integral con estufa, sala, comedor, patio y 2 equipos de refrigeración/minisplit. Precio de venta: $1,300,000 MXN.')" class="mt-5 w-full py-2.5 rounded-md bg-gray-800 text-white font-semibold text-sm shadow hover:bg-black transition-all text-center flex items-center justify-center gap-2">
+                            <span>Ver Más e Imágenes</span>
+                            <i class="fa-solid fa-images text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 7. Residencial Quintas del Rey (VENDIDA) -->
+                <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200 hover:shadow-card-hover transition-all flex flex-col group relative" data-status="vendida" data-type="residencial" data-search="residencial quintas del rey mexicali casa vendida">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                        <img src="quintas_01.jpg" alt="Casa en Residencial Quintas del Rey Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-red-600 text-white text-xs font-extrabold uppercase px-3 py-1.5 rounded-md shadow-lg tracking-wider flex items-center gap-1.5">
+                            <i class="fa-solid fa-tag"></i> VENDIDA
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 4 Fotos
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between bg-gray-50/50">
+                        <div>
+                            <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                Residencial Quintas del Rey
+                            </h3>
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                <span>Quintas del Rey, Mexicali, B.C.</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-200 text-xs text-gray-600 font-semibold">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bed text-brand-gold"></i>
+                                    <span>2 Recámaras</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bath text-brand-gold"></i>
+                                    <span>1.5 Baños</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 flex items-center justify-between">
+                                <div class="text-xl font-extrabold text-gray-800 font-serif">
+                                    $1,999,999 <span class="text-xs font-sans font-semibold text-gray-500">MXN</span>
+                                </div>
+                                <span class="text-xs font-bold text-red-600 bg-red-50 border border-red-200 px-2.5 py-1 rounded-md">
+                                    ¡VENDIDA!
+                                </span>
+                            </div>
+                        </div>
+
+                        <button onclick="openPropertyModal('Residencial Quintas del Rey (VENDIDA)', '$1,999,999 MXN', '125 m² Terr. • 80 m² Const. • 2 Rec. • 1.5 Baños', 'Residencial Quintas del Rey, Mexicali, B.C.', ['quintas_01.jpg', 'quintas_02.jpg', 'quintas_03.jpg', 'quintas_04.jpg'], '¡Propiedad vendida con éxito! Estrena casa en Residencial Quintas del Rey, Mexicali. Cuenta con 2 recámaras, 1.5 baños, sala, comedor y cocina con excelente iluminación, estacionamiento para 2 autos. Terreno: 125 m², Construcción: 80 m². Crédito bancario e Infonavit.')" class="mt-5 w-full py-2.5 rounded-md bg-gray-800 text-white font-semibold text-sm shadow hover:bg-black transition-all text-center flex items-center justify-center gap-2">
                             <span>Ver Más e Imágenes</span>
                             <i class="fa-solid fa-images text-xs"></i>
                         </button>
