@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth overflow-x-hidden">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no, viewport-fit=cover">
+    <title>Catálogo Completo y Propiedades Vendidas | Reynoso & Asociados Mexicali</title>
+    <meta name="description" content="Explora el catálogo completo de propiedades disponibles e inmuebles vendidos por Francisco Reynoso en Mexicali, Baja California.">
+    
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <meta name="theme-color" content="#1c3524">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Static Tailwind CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <!-- Tailwind JS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            green: '#1c3524',
+                            greenDark: '#132619',
+                            greenLight: '#264832',
+                            gold: '#c29b38',
+                            goldHover: '#a8832a',
+                            goldLight: '#dfc578',
+                            cream: '#faf8f3',
+                            creamDark: '#f4f0e4',
+                            whitePure: '#ffffff',
+                            whatsapp: '#25D366'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif']
+                    },
+                    boxShadow: {
+                        'luxury': '0 20px 40px -15px rgba(28, 53, 36, 0.12)',
+                        'card-hover': '0 25px 50px -12px rgba(194, 155, 56, 0.25)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            color-scheme: light !important;
+            supported-color-schemes: light !important;
+            forced-color-adjust: none !important;
+        }
+        *, ::before, ::after { box-sizing: border-box; }
+        html, body {
+            overflow-x: hidden !important;
+            width: 100% !important;
+            margin: 0;
+            padding: 0;
+            background-color: #faf8f3 !important;
+            color: #1f2937 !important;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .filter-btn-active {
+            background-color: #c29b38 !important;
+            color: #ffffff !important;
+            border-color: #c29b38 !important;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-gray-800 font-sans antialiased selection:bg-brand-gold selection:text-white flex flex-col min-h-screen">
+
+    <!-- CABECERA / NAVBAR -->
+    <header class="sticky top-0 z-40 glass-header border-b border-gray-100 shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between py-2.5 sm:py-3.5 min-h-[84px] sm:min-h-[96px]">
+                
+                <a href="index.html" class="flex items-center gap-3.5 group py-1">
+                    <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full flex items-center justify-center transition-transform group-hover:scale-105 shrink-0">
+                        <img src="logo_exact.svg" alt="Reynoso & Asociados Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <span class="font-serif font-extrabold text-xl sm:text-2xl tracking-wider text-brand-green leading-none group-hover:text-brand-gold transition-colors">
+                            REYNOSO
+                        </span>
+                        <span class="text-[11px] sm:text-xs font-bold uppercase tracking-[0.2em] text-brand-gold -mt-0.5">
+                            &amp; ASOCIADOS
+                        </span>
+                        <span class="text-[8px] sm:text-[10px] font-semibold tracking-[0.18em] text-gray-500 uppercase mt-0.5">
+                            ASESORÍA INMOBILIARIA
+                        </span>
+                    </div>
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-sm font-semibold text-gray-700 hover:text-brand-gold transition-colors">Inicio</a>
+                    <a href="propiedades.html" class="text-sm font-bold text-brand-gold relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-brand-gold">Catálogo &amp; Vendidas</a>
+                    <a href="index.html#servicios" class="text-sm font-semibold text-gray-700 hover:text-brand-gold transition-colors">Servicios</a>
+                    <a href="index.html#nosotros" class="text-sm font-semibold text-gray-700 hover:text-brand-gold transition-colors">Nosotros</a>
+                    <a href="index.html#contacto" class="text-sm font-semibold text-gray-700 hover:text-brand-gold transition-colors">Contacto</a>
+                </nav>
+
+                <div class="flex items-center gap-4">
+                    <a href="https://wa.me/526867013628" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Contacto Directo</span>
+                    </a>
+
+                    <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-md text-gray-700 hover:text-brand-gold focus:outline-none" aria-label="Abrir menú">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="index.html" class="block py-2 text-base font-semibold text-gray-800 hover:text-brand-gold border-b border-gray-100">Inicio</a>
+            <a href="propiedades.html" class="block py-2 text-base font-bold text-brand-gold border-b border-gray-100">Catálogo &amp; Vendidas</a>
+            <a href="index.html#servicios" class="block py-2 text-base font-semibold text-gray-800 hover:text-brand-gold border-b border-gray-100">Servicios</a>
+            <a href="index.html#nosotros" class="block py-2 text-base font-semibold text-gray-800 hover:text-brand-gold border-b border-gray-100">Nosotros</a>
+            <a href="index.html#contacto" class="block py-2 text-base font-semibold text-gray-800 hover:text-brand-gold">Contacto</a>
+        </div>
+    </header>
+
+    <!-- BANNER DE ENCABEZADO -->
+    <section class="bg-brand-green py-14 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block px-3 py-1 rounded-full bg-brand-gold/20 border border-brand-gold/40 text-brand-gold text-xs font-bold uppercase tracking-widest mb-3">
+                Inventario Completo &amp; Casos de Éxito
+            </span>
+            <h1 class="text-3xl sm:text-5xl font-serif font-extrabold tracking-tight">
+                Catálogo de Propiedades
+            </h1>
+            <p class="mt-3 text-base sm:text-lg text-gray-200 max-w-2xl mx-auto">
+                Explora el portafolio disponible e inmuebles vendidos por Francisco Reynoso en Mexicali.
+            </p>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT & FILTROS -->
+    <main class="flex-grow py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- BARRA DE BÚSQUEDA Y FILTROS -->
+            <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-brand-gold/20 mb-10 flex flex-col md:flex-row gap-4 items-center justify-between">
+                
+                <!-- Buscador por texto -->
+                <div class="relative w-full md:w-80">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" id="search-input" placeholder="Buscar por nombre o zona..." class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:border-brand-gold text-sm">
+                </div>
+
+                <!-- Botones de Pestañas / Filtros -->
+                <div class="flex flex-wrap items-center justify-center gap-2 w-full md:w-auto">
+                    <button onclick="filterProperties('todos')" id="filter-todos" class="filter-btn filter-btn-active px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider border border-gray-200 transition-all">
+                        Todos (<span id="count-todos">5</span>)
+                    </button>
+                    <button onclick="filterProperties('disponible')" id="filter-disponible" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
+                        🟢 Disponibles (<span id="count-disponible">4</span>)
+                    </button>
+                    <button onclick="filterProperties('vendida')" id="filter-vendida" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
+                        🏷️ Vendidas (<span id="count-vendida">1</span>)
+                    </button>
+                    <button onclick="filterProperties('residencial')" id="filter-residencial" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
+                        🏠 Residencial
+                    </button>
+                    <button onclick="filterProperties('industrial')" id="filter-industrial" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
+                        📐 Terrenos / Industrial
+                    </button>
+                </div>
+            </div>
+
+            <!-- GRID DE PROPIEDADES -->
+            <div id="properties-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                
+                <!-- 1. Benito Juárez (VENDIDA) -->
+                <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="vendida" data-type="residencial" data-search="casa benito juarez mexicali vendida">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                        <img src="benitojuarez_facade.jpg" alt="Casa en Venta Colonia Benito Juárez Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter grayscale-[15%]">
+                        <!-- Red / Gold Sold Badge -->
+                        <span class="absolute top-3 right-3 bg-red-700 text-white text-xs font-extrabold uppercase px-3 py-1.5 rounded-md shadow-lg tracking-wider flex items-center gap-1.5">
+                            <i class="fa-solid fa-circle-check"></i> VENDIDA
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 5 Fotos
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <div class="flex items-center justify-between">
+                                <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                    Casa Col. Benito Juárez
+                                </h3>
+                                <span class="text-[10px] font-bold uppercase px-2 py-0.5 bg-red-100 text-red-800 rounded">Vendida</span>
+                            </div>
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                <span>Col. Benito Juárez, Mexicali</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bed text-brand-gold"></i>
+                                    <span>3 Recámaras</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bath text-brand-gold"></i>
+                                    <span>2.5 Baños</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 flex items-center justify-between">
+                                <div class="text-xl font-extrabold text-gray-400 font-serif line-through">
+                                    $3,900,000 MXN
+                                </div>
+                                <span class="text-xs font-bold text-red-600 uppercase tracking-wider bg-red-50 px-2 py-1 rounded">Éxito de Venta</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openPropertyModal('Casa en Venta – Colonia Benito Juárez (VENDIDA)', 'PROPIEDAD VENDIDA', '160 m² Terr. • 134 m² Const. • 3 Rec. • 2.5 Baños', 'Colonia Benito Juárez, Mexicali', ['benitojuarez_facade.jpg', 'benitojuarez_living.jpg', 'benitojuarez_interior.jpg', 'benitojuarez_bath.jpg', 'benitojuarez_patio.jpg'], 'PROPIEDAD VENDIDA CON ÉXITO. Excelente oportunidad en una de las zonas más céntricas de Mexicali. Cuenta con 160 m² de terreno y 134 m² de construcción distribuidos en 3 recámaras, 2.5 baños, cochera con portón eléctrico y acabados de lujo.')" class="mt-5 w-full py-2.5 rounded-md bg-gray-700 text-white font-semibold text-sm shadow hover:bg-gray-800 transition-all text-center flex items-center justify-center gap-2">
+                            <span>Ver Galería Histórica</span>
+                            <i class="fa-solid fa-images text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. Corceles Residencial -->
+                <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="residencial" data-search="corceles residencial casa alberca mexicali">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                        <img src="corceles_anuncio.jpg" alt="Corceles Residencial - Residencia Privada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                            EXCLUSIVA
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 5 Fotos
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                Corceles Residencial
+                            </h3>
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                <span>Privada con Casa Club & Alberca</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bed text-brand-gold"></i>
+                                    <span>5 Recámaras</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bath text-brand-gold"></i>
+                                    <span>4 Baños Completo</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                $2,380,000 <span class="text-xs font-sans font-semibold text-gray-500">MXN</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openPropertyModal('Corceles Residencial - Residencia Privada', '$2,380,000 MXN', '5 Recámaras • 4 Baños • Mármol', 'Corceles Residencial, Mexicali', ['corceles_anuncio.jpg', 'corceles_bano.jpg', 'corceles_comedor.jpg', 'corceles_cuarto_lavado.jpg', 'corceles_recamara.jpg'], 'Exclusiva residencia en Fraccionamiento Privado Corceles Residencial con acceso a Casa Club, parque recreativo y alberca. Cuenta con 5 recámaras, 4 baños completos, 3 cocinas, sala, comedor, cuarto de lavado y elegantes acabados en pisos de mármol. 🔥 Precio especial: $2,380,000')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                            <span>Ver Más y Galería</span>
+                            <i class="fa-solid fa-images text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3. Macro Terreno Río Hardy -->
+                <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="industrial" data-search="rio hardy terreno macro hectareas mexicali">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                        <img src="rio_hardy_aerea.jpg" alt="Terreno Río Hardy 4,000 Hectáreas Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                            INVERSIÓN
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 5 Fotos
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                Macro Terreno Río Hardy
+                            </h3>
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                <span>Río Hardy, Mexicali, B.C.</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
+                                    <span>4,000 Hectáreas</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-water text-brand-gold"></i>
+                                    <span>Rodeado de 3 Ríos</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                En Venta <span class="text-xs font-sans font-semibold text-gray-500">(Para Inversionistas)</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openPropertyModal('Macro Terreno Río Hardy (4,000 Hectáreas)', 'En Venta - Oportunidad Única', '4,000 Hectáreas • 3 Ríos • Uso Turístico/Industrial', 'Río Hardy, Mexicali, B.C.', ['rio_hardy_aerea.jpg', 'rio_hardy_entorno.jpg', 'rio_hardy_mapa.jpg', 'rio_hardy_potencial.jpg', 'rio_hardy_ubicacion.jpg'], 'Oportunidad de inversión para inversionistas transnacionales y extranjeros en Las Nuevas Vegas de Mexicali (Río Hardy). Área de 4,000 Hectáreas en venta rodeadas de 3 ríos: Río Colorado/Hardy, Río Burma y Río Choropo con acceso a agua dulce y salada.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                            <span>Ver Más y Galería</span>
+                            <i class="fa-solid fa-images text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. Terreno Industrial Céntrico -->
+                <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="industrial" data-search="terreno industrial teran teran mexicali">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                        <img src="terreno_industrial_01.jpg" alt="Terreno Área Industrial Céntrico en Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                            INDUSTRIAL
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 2 Fotos
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                Terreno Industrial Céntrico
+                            </h3>
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                <span>A 200m de Calzada Terán Terán</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
+                                    <span>3,687 m²</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bolt text-brand-gold"></i>
+                                    <span>Luz Trifásica</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                $80 <span class="text-xs font-sans font-semibold text-gray-500">USD / m² (o mejor oferta)</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openPropertyModal('Terreno Área Industrial Céntrico', '$80 USD / m²', '3,687 m² • Luz Trifásica • Pavimentado', 'A 200m de Calzada Terán Terán, Mexicali', ['terreno_industrial_01.jpg', 'terreno_industrial_02.jpg'], 'Terreno de uso industrial altamente céntrico con superficie de 3,687 m². Ubicado a solo 200 metros de la Calzada Héctor Terán Terán. Cuenta con acceso a energía eléctrica trifásica y pavimento.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                            <span>Ver Más y Galería</span>
+                            <i class="fa-solid fa-images text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5. Residencia Villafontana -->
+                <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="residencial" data-search="residencia villafontana casa mexicali">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                        <img src="villafontana_facade.jpg" alt="Residencia en Fracc. Villafontana Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                            RESIDENCIAL
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 4 Fotos
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                Residencia Fracc. Villafontana
+                            </h3>
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                <span>Fracc. Villafontana, Mexicali</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-house-chimney text-brand-gold"></i>
+                                    <span>2 Plantas</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-car text-brand-gold"></i>
+                                    <span>Cochera Techada</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                $6,350,000 <span class="text-xs font-sans font-semibold text-gray-500">MXN</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openPropertyModal('Residencia en Fracc. Villafontana', '$6,350,000 MXN', '2 Plantas • Cochera Techada • Patio', 'Fracc. Villafontana, Mexicali', ['villafontana_facade.jpg', 'villafontana_kitchen.jpg', 'villafontana_patio1.jpg', 'villafontana_patio2.jpg'], 'Hermosa y amplia residencia de dos plantas ubicada en el prestigioso Fraccionamiento Villafontana. Cuenta con fachada contemporánea, portón eléctrico con cochera techada, cocina integral de madera equipada y patio trasero.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                            <span>Ver Más y Galería</span>
+                            <i class="fa-solid fa-images text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contacto" class="bg-brand-green text-white pt-12 pb-8 border-t border-brand-greenDark mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs text-gray-400">
+            <p>Reynoso &amp; Asociados • Asesoría Inmobiliaria en Mexicali © 2026. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL GALERÍA -->
+    <div id="property-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[92vh] flex flex-col overflow-hidden shadow-2xl relative my-auto">
+            <div class="relative w-full aspect-[16/9] sm:aspect-[21/9] bg-gray-950 flex items-center justify-center overflow-hidden">
+                <img id="modal-img" src="" alt="Fotografía de la propiedad" class="max-h-full max-w-full object-contain">
+                <span id="modal-img-counter" class="absolute top-4 left-4 bg-black/75 text-white text-xs font-semibold px-3 py-1 rounded-full">1 / 1</span>
+                <button onclick="closePropertyModal()" class="absolute top-4 right-4 w-9 h-9 bg-black/75 hover:bg-black text-white rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+                <button id="modal-prev-btn" onclick="prevModalImage()" class="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/60 hover:bg-black text-white rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-left text-lg"></i>
+                </button>
+                <button id="modal-next-btn" onclick="nextModalImage()" class="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/60 hover:bg-black text-white rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-right text-lg"></i>
+                </button>
+            </div>
+            <div class="p-3 bg-gray-900 overflow-x-auto flex gap-2 justify-center" id="modal-thumbnails-container"></div>
+            <div class="p-6 overflow-y-auto flex-grow space-y-4">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-gray-100 pb-4">
+                    <div>
+                        <h2 id="modal-title" class="text-2xl font-serif font-bold text-brand-green"></h2>
+                        <div id="modal-location" class="flex items-center gap-1.5 text-xs text-gray-500 font-semibold mt-1">
+                            <i class="fa-solid fa-location-dot text-brand-gold"></i><span></span>
+                        </div>
+                    </div>
+                    <div id="modal-price" class="text-2xl font-serif font-extrabold text-brand-gold"></div>
+                </div>
+                <p id="modal-desc" class="text-sm text-gray-600 leading-relaxed"></p>
+                <div class="pt-4 flex flex-col sm:flex-row gap-3">
+                    <a id="modal-wa-btn" href="#" target="_blank" class="flex-1 py-3 bg-brand-whatsapp text-white text-center font-bold text-sm rounded-md shadow hover:bg-emerald-600 flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i><span>Solicitar Informes por WhatsApp</span>
+                    </a>
+                    <button onclick="closePropertyModal()" class="px-6 py-3 bg-gray-100 text-gray-700 font-semibold text-sm rounded-md hover:bg-gray-200 text-center">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        }
+
+        // Filter Logic
+        function filterProperties(category) {
+            const cards = document.querySelectorAll('.property-card');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+
+            filterBtns.forEach(btn => btn.classList.remove('filter-btn-active', 'bg-white', 'text-gray-700'));
+            
+            const activeBtn = document.getElementById(`filter-${category}`);
+            if (activeBtn) activeBtn.classList.add('filter-btn-active');
+
+            cards.forEach(card => {
+                const status = card.getAttribute('data-status');
+                const type = card.getAttribute('data-type');
+
+                if (category === 'todos') {
+                    card.classList.remove('hidden');
+                } else if (category === 'disponible' || category === 'vendida') {
+                    if (status === category) card.classList.remove('hidden');
+                    else card.classList.add('hidden');
+                } else if (category === 'residencial' || category === 'industrial') {
+                    if (type === category) card.classList.remove('hidden');
+                    else card.classList.add('hidden');
+                }
+            });
+        }
+
+        // Live Search Input
+        const searchInput = document.getElementById('search-input');
+        if (searchInput) {
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase().trim();
+                const cards = document.querySelectorAll('.property-card');
+
+                cards.forEach(card => {
+                    const searchText = card.getAttribute('data-search') || '';
+                    if (searchText.includes(query)) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        }
+
+        // Carousel Modal
+        let currentModalImages = [];
+        let currentModalIndex = 0;
+
+        function openPropertyModal(title, price, area, location, images, desc) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-price').textContent = price;
+            document.getElementById('modal-location').querySelector('span').textContent = location;
+            document.getElementById('modal-desc').textContent = desc;
+
+            currentModalImages = Array.isArray(images) ? images : [images];
+            currentModalIndex = 0;
+            updateModalCarousel();
+
+            const waMsg = encodeURIComponent(`Hola, me interesa solicitar información sobre: ${title} en ${location}.`);
+            document.getElementById('modal-wa-btn').href = `https://wa.me/526867013628?text=${waMsg}`;
+
+            document.getElementById('property-modal').classList.remove('hidden');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function updateModalCarousel() {
+            if (currentModalImages.length === 0) return;
+            const modalImg = document.getElementById('modal-img');
+            const counter = document.getElementById('modal-img-counter');
+            const thumbsContainer = document.getElementById('modal-thumbnails-container');
+
+            modalImg.src = currentModalImages[currentModalIndex];
+            counter.textContent = `${currentModalIndex + 1} / ${currentModalImages.length}`;
+
+            thumbsContainer.innerHTML = '';
+            currentModalImages.forEach((imgSrc, idx) => {
+                const thumb = document.createElement('img');
+                thumb.src = imgSrc;
+                thumb.className = `w-16 h-12 object-cover rounded-md cursor-pointer border-2 transition-all flex-shrink-0 ${
+                    idx === currentModalIndex ? 'border-brand-gold scale-105 opacity-100' : 'border-transparent opacity-60 hover:opacity-100'
+                }`;
+                thumb.onclick = () => {
+                    currentModalIndex = idx;
+                    updateModalCarousel();
+                };
+                thumbsContainer.appendChild(thumb);
+            });
+        }
+
+        function prevModalImage() {
+            if (currentModalImages.length <= 1) return;
+            currentModalIndex = (currentModalIndex - 1 + currentModalImages.length) % currentModalImages.length;
+            updateModalCarousel();
+        }
+
+        function nextModalImage() {
+            if (currentModalImages.length <= 1) return;
+            currentModalIndex = (currentModalIndex + 1) % currentModalImages.length;
+            updateModalCarousel();
+        }
+
+        function closePropertyModal() {
+            document.getElementById('property-modal').classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        document.addEventListener('keydown', (e) => {
+            const modal = document.getElementById('property-modal');
+            if (modal.classList.contains('hidden')) return;
+            if (e.key === 'ArrowLeft') prevModalImage();
+            else if (e.key === 'ArrowRight') nextModalImage();
+            else if (e.key === 'Escape') closePropertyModal();
+        });
+    </script>
+</body>
+</html>
