@@ -359,8 +359,8 @@
                     </p>
                 </div>
 
-                <!-- Property Cards Grid (4 cards responsive layout) -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                <!-- Property Cards Grid (5 cards responsive layout) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 lg:gap-8">
                     
                     <!-- Tarjeta 1: Corceles Residencial -->
                     <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover hover:border-brand-gold/40 transition-all duration-300 flex flex-col group">
@@ -406,7 +406,51 @@
                         </div>
                     </div>
 
-                    <!-- Tarjeta 2: Terreno Área Industrial Céntrico -->
+                    <!-- Tarjeta 2: Macro Terreno Río Hardy -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover hover:border-brand-gold/40 transition-all duration-300 flex flex-col group">
+                        <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                            <img src="rio_hardy_aerea.jpg" alt="Terreno Río Hardy 4,000 Hectáreas Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                                INVERSIÓN
+                            </span>
+                            <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                                <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 5 Fotos
+                            </span>
+                        </div>
+                        <div class="p-5 flex flex-col flex-grow justify-between">
+                            <div>
+                                <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                    Macro Terreno Río Hardy
+                                </h3>
+                                <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                    <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                    <span>Río Hardy, Mexicali, B.C.</span>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
+                                        <span>4,000 Hectáreas</span>
+                                    </div>
+                                    <div class="flex items-center gap-1.5">
+                                        <i class="fa-solid fa-water text-brand-gold"></i>
+                                        <span>Rodeado de 3 Ríos</span>
+                                    </div>
+                                </div>
+
+                                <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                    En Venta <span class="text-xs font-sans font-semibold text-gray-500">(Para Inversionistas)</span>
+                                </div>
+                            </div>
+
+                            <button onclick="openPropertyModal('Macro Terreno Río Hardy (4,000 Hectáreas)', 'En Venta - Oportunidad Única', '4,000 Hectáreas • 3 Ríos • Uso Turístico/Industrial', 'Río Hardy, Mexicali, B.C.', ['rio_hardy_aerea.jpg', 'rio_hardy_entorno.jpg', 'rio_hardy_mapa.jpg', 'rio_hardy_potencial.jpg', 'rio_hardy_ubicacion.jpg'], 'Oportunidad de inversión para inversionistas transnacionales y extranjeros en Las Nuevas Vegas de Mexicali (Río Hardy). Área de 4,000 Hectáreas en venta rodeadas de 3 ríos: Río Colorado/Hardy, Río Burma y Río Choropo con acceso a agua dulce y salada.\n\nIdeal para: 1. Zona Turística. 2. Hoteles, cabañas y casinos. 3. Instalación de paneles solares (cercanía a Cerro Prieto). 4. Campo de Golf. 5. Pista acuática de varios kilómetros para moto acuática, lanchas, skys y pesca. 6. Agricultura. 7. Granjas de camarón y pesquera. 8. Área aeroportuaria. 9. Eventos tipo Baja 250.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                                <span>Ver Más y Galería</span>
+                                <i class="fa-solid fa-images text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3: Terreno Área Industrial Céntrico -->
                     <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover hover:border-brand-gold/40 transition-all duration-300 flex flex-col group">
                         <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
                             <img src="terreno_industrial_01.jpg" alt="Terreno Área Industrial Céntrico en Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
