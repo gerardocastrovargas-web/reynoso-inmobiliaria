@@ -168,10 +168,10 @@
                         Todos (<span id="count-todos">5</span>)
                     </button>
                     <button onclick="filterProperties('disponible')" id="filter-disponible" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
-                        🟢 Disponibles (<span id="count-disponible">4</span>)
+                        🟢 Disponibles (<span id="count-disponible">5</span>)
                     </button>
                     <button onclick="filterProperties('vendida')" id="filter-vendida" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
-                        🏷️ Vendidas (<span id="count-vendida">1</span>)
+                        🏷️ Vendidas (<span id="count-vendida">0</span>)
                     </button>
                     <button onclick="filterProperties('residencial')" id="filter-residencial" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
                         🏠 Residencial
@@ -185,58 +185,7 @@
             <!-- GRID DE PROPIEDADES -->
             <div id="properties-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 
-                <!-- 1. Benito Juárez (VENDIDA) -->
-                <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="vendida" data-type="residencial" data-search="casa benito juarez mexicali vendida">
-                    <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
-                        <img src="benitojuarez_facade.jpg" alt="Casa en Venta Colonia Benito Juárez Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter grayscale-[15%]">
-                        <!-- Red / Gold Sold Badge -->
-                        <span class="absolute top-3 right-3 bg-red-700 text-white text-xs font-extrabold uppercase px-3 py-1.5 rounded-md shadow-lg tracking-wider flex items-center gap-1.5">
-                            <i class="fa-solid fa-circle-check"></i> VENDIDA
-                        </span>
-                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
-                            <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 5 Fotos
-                        </span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-grow justify-between">
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
-                                    Casa Col. Benito Juárez
-                                </h3>
-                                <span class="text-[10px] font-bold uppercase px-2 py-0.5 bg-red-100 text-red-800 rounded">Vendida</span>
-                            </div>
-                            <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
-                                <i class="fa-solid fa-location-dot text-brand-gold"></i>
-                                <span>Col. Benito Juárez, Mexicali</span>
-                            </div>
-
-                            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
-                                <div class="flex items-center gap-1.5">
-                                    <i class="fa-solid fa-bed text-brand-gold"></i>
-                                    <span>3 Recámaras</span>
-                                </div>
-                                <div class="flex items-center gap-1.5">
-                                    <i class="fa-solid fa-bath text-brand-gold"></i>
-                                    <span>2.5 Baños</span>
-                                </div>
-                            </div>
-
-                            <div class="mt-4 flex items-center justify-between">
-                                <div class="text-xl font-extrabold text-gray-400 font-serif line-through">
-                                    $3,900,000 MXN
-                                </div>
-                                <span class="text-xs font-bold text-red-600 uppercase tracking-wider bg-red-50 px-2 py-1 rounded">Éxito de Venta</span>
-                            </div>
-                        </div>
-
-                        <button onclick="openPropertyModal('Casa en Venta – Colonia Benito Juárez (VENDIDA)', 'PROPIEDAD VENDIDA', '160 m² Terr. • 134 m² Const. • 3 Rec. • 2.5 Baños', 'Colonia Benito Juárez, Mexicali', ['benitojuarez_facade.jpg', 'benitojuarez_living.jpg', 'benitojuarez_interior.jpg', 'benitojuarez_bath.jpg', 'benitojuarez_patio.jpg'], 'PROPIEDAD VENDIDA CON ÉXITO. Excelente oportunidad en una de las zonas más céntricas de Mexicali. Cuenta con 160 m² de terreno y 134 m² de construcción distribuidos en 3 recámaras, 2.5 baños, cochera con portón eléctrico y acabados de lujo.')" class="mt-5 w-full py-2.5 rounded-md bg-gray-700 text-white font-semibold text-sm shadow hover:bg-gray-800 transition-all text-center flex items-center justify-center gap-2">
-                            <span>Ver Galería Histórica</span>
-                            <i class="fa-solid fa-images text-xs"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- 2. Corceles Residencial -->
+                <!-- 1. Corceles Residencial -->
                 <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="residencial" data-search="corceles residencial casa alberca mexicali">
                     <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
                         <img src="corceles_anuncio.jpg" alt="Corceles Residencial - Residencia Privada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -280,7 +229,7 @@
                     </div>
                 </div>
 
-                <!-- 3. Macro Terreno Río Hardy -->
+                <!-- 2. Macro Terreno Río Hardy -->
                 <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="industrial" data-search="rio hardy terreno macro hectareas mexicali">
                     <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
                         <img src="rio_hardy_aerea.jpg" alt="Terreno Río Hardy 4,000 Hectáreas Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -324,7 +273,7 @@
                     </div>
                 </div>
 
-                <!-- 4. Terreno Industrial Céntrico -->
+                <!-- 3. Terreno Industrial Céntrico -->
                 <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="industrial" data-search="terreno industrial teran teran mexicali">
                     <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
                         <img src="terreno_industrial_01.jpg" alt="Terreno Área Industrial Céntrico en Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -368,7 +317,7 @@
                     </div>
                 </div>
 
-                <!-- 5. Residencia Villafontana -->
+                <!-- 4. Residencia Villafontana -->
                 <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="residencial" data-search="residencia villafontana casa mexicali">
                     <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
                         <img src="villafontana_facade.jpg" alt="Residencia en Fracc. Villafontana Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -406,6 +355,50 @@
                         </div>
 
                         <button onclick="openPropertyModal('Residencia en Fracc. Villafontana', '$6,350,000 MXN', '2 Plantas • Cochera Techada • Patio', 'Fracc. Villafontana, Mexicali', ['villafontana_facade.jpg', 'villafontana_kitchen.jpg', 'villafontana_patio1.jpg', 'villafontana_patio2.jpg'], 'Hermosa y amplia residencia de dos plantas ubicada en el prestigioso Fraccionamiento Villafontana. Cuenta con fachada contemporánea, portón eléctrico con cochera techada, cocina integral de madera equipada y patio trasero.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                            <span>Ver Más y Galería</span>
+                            <i class="fa-solid fa-images text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5. Casa Col. Benito Juárez (EN VENTA) -->
+                <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="residencial" data-search="casa benito juarez mexicali">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                        <img src="benitojuarez_facade.jpg" alt="Casa en Venta Colonia Benito Juárez Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                            DESTAQUE
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 5 Fotos
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                Casa Col. Benito Juárez
+                            </h3>
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                <span>Col. Benito Juárez, Mexicali</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bed text-brand-gold"></i>
+                                    <span>3 Recámaras</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bath text-brand-gold"></i>
+                                    <span>2.5 Baños</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                $3,900,000 <span class="text-xs font-sans font-semibold text-gray-500">MXN</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openPropertyModal('Casa en Venta – Colonia Benito Juárez', '$3,900,000 MXN', '160 m² Terr. • 134 m² Const. • 3 Rec. • 2.5 Baños', 'Colonia Benito Juárez, Mexicali', ['benitojuarez_facade.jpg', 'benitojuarez_living.jpg', 'benitojuarez_interior.jpg', 'benitojuarez_bath.jpg', 'benitojuarez_patio.jpg'], 'Excelente oportunidad en una de las zonas más céntricas y convenientes de Mexicali. Esta hermosa propiedad en Colonia Benito Juárez combina comodidad, funcionalidad y excelentes acabados. Cuenta con 160 m² de terreno y 134 m² de construcción distribuidos en 3 recámaras (la principal con baño completo y clóset), 2.5 baños, cochera con portón eléctrico, cuarto de lavado, sistema de ductos en toda la casa, aislamiento térmico en todas las paredes, iluminación tipo spot, puertas de madera, piso de loseta y muebles de baño incluidos. Precio de venta: $3,900,000.00 MXN.')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
                             <span>Ver Más y Galería</span>
                             <i class="fa-solid fa-images text-xs"></i>
                         </button>
