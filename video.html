@@ -11,7 +11,7 @@
     <meta property="og:type" content="video.other">
     <meta property="og:title" content="Video Reynoso Inmobiliaria">
     <meta property="og:description" content="Haz clic para reproducir el video en alta definición.">
-    <meta property="og:video" content="dreamina-2026-09-02-6240.mp4">
+    <meta property="og:video" content="0917.mp4">
     <meta property="og:video:type" content="video/mp4">
 
     <!-- Fonts & Icons -->
@@ -170,20 +170,20 @@
 
     <main class="main-card">
         <div class="video-wrapper">
-            <video id="player" controls playsinline preload="metadata" poster="Index.jpg">
-                <source src="dreamina-2026-09-02-6240.mp4" type="video/mp4">
+            <video id="player" controls autoplay muted playsinline loop preload="auto" poster="Index.jpg">
+                <source src="0917.mp4" type="video/mp4">
                 Tu navegador no soporta la reproducción de video.
             </video>
         </div>
         <div class="controls-bar">
             <div class="actions-grid">
-                <button class="btn btn-gold" onclick="togglePlay()">
-                    <i class="fa-solid fa-play" id="playIcon"></i> <span id="playText">Reproducir</span>
+                <button class="btn btn-gold" onclick="toggleAudio()">
+                    <i class="fa-solid fa-volume-xmark" id="audioIcon"></i> <span id="audioText">Activar Sonido</span>
                 </button>
                 <button class="btn btn-outline" onclick="shareVideo()">
                     <i class="fa-solid fa-share-nodes"></i> Compartir
                 </button>
-                <a href="dreamina-2026-09-02-6240.mp4" download="Video-Reynoso-Inmobiliaria.mp4" class="btn btn-outline btn-full">
+                <a href="0917.mp4" download="Video-Reynoso-Inmobiliaria.mp4" class="btn btn-outline btn-full">
                     <i class="fa-solid fa-download"></i> Descargar Video MP4
                 </a>
             </div>
@@ -197,30 +197,34 @@
 
     <script>
         const video = document.getElementById('player');
-        const playIcon = document.getElementById('playIcon');
-        const playText = document.getElementById('playText');
+        const audioIcon = document.getElementById('audioIcon');
+        const audioText = document.getElementById('audioText');
 
-        function togglePlay() {
+        // Autoplay attempt on load
+        window.addEventListener('DOMContentLoaded', () => {
+            video.muted = true;
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.catch(error => {
+                    console.log('Autoplay impedido por el navegador:', error);
+                });
+            }
+        });
+
+        function toggleAudio() {
+            if (video.muted) {
+                video.muted = false;
+                audioIcon.className = 'fa-solid fa-volume-high';
+                audioText.textContent = 'Silenciar';
+            } else {
+                video.muted = true;
+                audioIcon.className = 'fa-solid fa-volume-xmark';
+                audioText.textContent = 'Activar Sonido';
+            }
             if (video.paused) {
                 video.play();
-                playIcon.className = 'fa-solid fa-pause';
-                playText.textContent = 'Pausar';
-            } else {
-                video.pause();
-                playIcon.className = 'fa-solid fa-play';
-                playText.textContent = 'Reproducir';
             }
         }
-
-        video.addEventListener('play', () => {
-            playIcon.className = 'fa-solid fa-pause';
-            playText.textContent = 'Pausar';
-        });
-
-        video.addEventListener('pause', () => {
-            playIcon.className = 'fa-solid fa-play';
-            playText.textContent = 'Reproducir';
-        });
 
         async function shareVideo() {
             if (navigator.share) {
