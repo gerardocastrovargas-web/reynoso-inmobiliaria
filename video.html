@@ -1,312 +1,77 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Video - Reynoso Inmobiliaria</title>
     <meta name="description" content="Video de presentación de Reynoso Inmobiliaria">
-    <meta name="theme-color" content="#0f172a">
-    
-    <!-- Open Graph -->
+    <meta name="theme-color" content="#000000">
     <meta property="og:type" content="video.other">
     <meta property="og:title" content="Video Reynoso Inmobiliaria">
-    <meta property="og:description" content="Mira el video de presentación de Reynoso Inmobiliaria.">
+    <meta property="og:description" content="Mira el video de Reynoso Inmobiliaria.">
     <meta property="og:video" content="0917.mp4">
     <meta property="og:video:type" content="video/mp4">
-
-    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            background-color: #0b0f19;
-            color: #f8fafc;
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px;
-        }
-        .header {
-            width: 100%;
-            max-width: 500px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: inherit;
-        }
-        .logo-img {
-            height: 38px;
-            width: auto;
-            border-radius: 6px;
-        }
-        .brand-title {
-            font-weight: 800;
-            font-size: 1.1rem;
-            letter-spacing: -0.5px;
-            background: linear-gradient(135deg, #d4af37 0%, #f3e5ab 50%, #aa7c11 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .main-card {
-            width: 100%;
-            max-width: 500px;
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(212, 175, 55, 0.25);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-            margin: 20px 0;
-        }
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            background: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            aspect-ratio: 9/16;
-            max-height: 70vh;
-            cursor: pointer;
-        }
-        video {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 12px 12px 0 0;
-        }
-        .play-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 12px;
-            z-index: 10;
-            transition: opacity 0.3s ease;
-        }
-        .play-overlay.hidden {
-            opacity: 0;
-            pointer-events: none;
-        }
-        .play-big-btn {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
-            color: #0b0f19;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
-            border: none;
-            cursor: pointer;
-        }
-        .play-hint {
-            background: rgba(15, 23, 42, 0.85);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: #f3e5ab;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-        .controls-bar {
-            padding: 16px 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            background: rgba(15, 23, 42, 0.9);
-        }
-        .actions-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 14px 18px;
-            border-radius: 12px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            text-decoration: none;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-        }
-        .btn:active {
-            transform: scale(0.97);
-        }
-        .btn-gold {
-            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
-            color: #0b0f19;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
-        }
-        .btn-gold:hover {
-            background: linear-gradient(135deg, #e5be48 0%, #c9971c 100%);
-        }
-        .btn-outline {
-            background: rgba(255, 255, 255, 0.08);
-            color: #f8fafc;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-        }
-        .btn-outline:hover {
-            background: rgba(255, 255, 255, 0.15);
-        }
-        .btn-full {
-            grid-column: span 2;
-        }
-        .footer {
-            width: 100%;
-            max-width: 500px;
-            text-align: center;
-            font-size: 0.85rem;
-            color: #94a3b8;
-            padding: 12px 0;
-        }
-        .footer a {
-            color: #d4af37;
-            text-decoration: none;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { width: 100%; height: 100%; background: #000; overflow: hidden; font-family: 'Plus Jakarta Sans', sans-serif; }
+        #player { position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+        .play-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.45); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; z-index: 10; transition: opacity .4s; }
+        .play-overlay.hidden { opacity: 0; pointer-events: none; }
+        .play-circle { width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg,#d4af37,#b8860b); display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #0b0f19; box-shadow: 0 0 40px rgba(212,175,55,.7); cursor: pointer; border: none; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%{box-shadow:0 0 0 0 rgba(212,175,55,.7)} 70%{box-shadow:0 0 0 18px rgba(212,175,55,0)} 100%{box-shadow:0 0 0 0 rgba(212,175,55,0)} }
+        .play-label { background: rgba(0,0,0,.65); color: #f3e5ab; font-weight: 700; font-size: .9rem; padding: 8px 20px; border-radius: 24px; border: 1px solid rgba(212,175,55,.4); backdrop-filter: blur(6px); }
+        .top-bar { position: fixed; top: 0; left: 0; width: 100%; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between; z-index: 20; background: linear-gradient(to bottom,rgba(0,0,0,.65) 0%,transparent 100%); transition: opacity .4s; }
+        .top-bar.hidden { opacity: 0; pointer-events: none; }
+        .logo-row { display: flex; align-items: center; gap: 9px; text-decoration: none; }
+        .logo-img { height: 34px; border-radius: 5px; }
+        .brand-title { font-weight: 800; font-size: .95rem; background: linear-gradient(135deg,#d4af37 0%,#f3e5ab 50%,#aa7c11 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .btn-home { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 20px; font-size: .82rem; font-weight: 700; text-decoration: none; color: #f8fafc; background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.2); backdrop-filter: blur(8px); }
+        .bottom-bar { position: fixed; bottom: 0; left: 0; width: 100%; padding: 20px 16px 32px; display: flex; gap: 10px; justify-content: center; align-items: center; z-index: 20; background: linear-gradient(to top,rgba(0,0,0,.7) 0%,transparent 100%); transition: opacity .4s; }
+        .bottom-bar.hidden { opacity: 0; pointer-events: none; }
+        .ctrl-btn { display: inline-flex; align-items: center; gap: 7px; padding: 11px 20px; border-radius: 50px; font-size: .88rem; font-weight: 700; border: none; cursor: pointer; backdrop-filter: blur(8px); transition: transform .18s; text-decoration: none; }
+        .ctrl-btn:active { transform: scale(.94); }
+        .ctrl-play { background: linear-gradient(135deg,#d4af37,#b8860b); color: #0b0f19; box-shadow: 0 4px 18px rgba(212,175,55,.4); }
+        .ctrl-sound,.ctrl-share { background: rgba(255,255,255,.18); color: #fff; border: 1px solid rgba(255,255,255,.25); }
+        .ctrl-download { background: rgba(255,255,255,.12); color: #d4af37; border: 1px solid rgba(212,175,55,.3); }
     </style>
 </head>
 <body>
-
-    <header class="header">
-        <a href="index.html" class="logo-container">
-            <img src="LOGO.jpg" alt="Reynoso Logo" class="logo-img" onerror="this.style.display='none'">
+    <video id="player" autoplay muted playsinline webkit-playsinline loop preload="auto">
+        <source src="0917.mp4" type="video/mp4">
+    </video>
+    <div class="play-overlay" id="overlay" onclick="startWithSound()">
+        <button class="play-circle"><i class="fa-solid fa-play" style="margin-left:4px"></i></button>
+        <div class="play-label">Tocar para reproducir con sonido</div>
+    </div>
+    <div class="top-bar" id="topBar">
+        <a href="index.html" class="logo-row">
+            <img src="LOGO.jpg" alt="Logo" class="logo-img" onerror="this.style.display='none'">
             <span class="brand-title">REYNOSO INMOBILIARIA</span>
         </a>
-        <a href="index.html" class="btn btn-outline" style="padding: 8px 14px; font-size: 0.85rem;">
-            <i class="fa-solid fa-house"></i> Inicio
-        </a>
-    </header>
-
-    <main class="main-card">
-        <div class="video-wrapper" onclick="startPlaybackWithSound()">
-            <video id="player" controls autoplay muted playsinline webkit-playsinline loop preload="auto">
-                <source src="0917.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
-            </video>
-            <div class="play-overlay" id="overlay">
-                <button class="play-big-btn">
-                    <i class="fa-solid fa-play" style="margin-left: 4px;"></i>
-                </button>
-                <div class="play-hint">Tocar para reproducir video</div>
-            </div>
-        </div>
-        <div class="controls-bar">
-            <div class="actions-grid">
-                <button class="btn btn-gold" onclick="togglePlay()">
-                    <i class="fa-solid fa-pause" id="playIcon"></i> <span id="playText">Pausar / Play</span>
-                </button>
-                <button class="btn btn-outline" onclick="shareVideo()">
-                    <i class="fa-solid fa-share-nodes"></i> Compartir
-                </button>
-                <a href="0917.mp4" download="Video-Reynoso-Inmobiliaria.mp4" class="btn btn-outline btn-full">
-                    <i class="fa-solid fa-download"></i> Descargar Video MP4
-                </a>
-            </div>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <p>© 2026 Reynoso Inmobiliaria. Todos los derechos reservados.</p>
-        <p style="margin-top: 6px;"><a href="tarjeta.html"><i class="fa-solid fa-id-card"></i> Ver Tarjeta Digital</a></p>
-    </footer>
-
+        <a href="index.html" class="btn-home"><i class="fa-solid fa-house"></i> Inicio</a>
+    </div>
+    <div class="bottom-bar" id="bottomBar">
+        <button class="ctrl-btn ctrl-play" onclick="togglePlay()"><i class="fa-solid fa-pause" id="playIcon"></i><span id="playText"> Pausar</span></button>
+        <button class="ctrl-btn ctrl-sound" onclick="toggleSound()"><i class="fa-solid fa-volume-xmark" id="soundIcon"></i></button>
+        <button class="ctrl-btn ctrl-share" onclick="shareVideo()"><i class="fa-solid fa-share-nodes"></i></button>
+        <a href="0917.mp4" download="Video-Reynoso-Inmobiliaria.mp4" class="ctrl-btn ctrl-download"><i class="fa-solid fa-download"></i></a>
+    </div>
     <script>
-        const video = document.getElementById('player');
-        const overlay = document.getElementById('overlay');
-        const playIcon = document.getElementById('playIcon');
-        const playText = document.getElementById('playText');
-
-        // Intento de reproducción automática silenciosa
-        window.addEventListener('DOMContentLoaded', () => {
-            video.muted = true;
-            const playPromise = video.play();
-            if (playPromise !== undefined) {
-                playPromise.then(() => {
-                    overlay.classList.add('hidden');
-                }).catch(error => {
-                    console.log('Autoplay impedido por navegador:', error);
-                });
-            }
-        });
-
-        function startPlaybackWithSound() {
-            video.muted = false;
-            video.play();
-            overlay.classList.add('hidden');
-        }
-
-        function togglePlay() {
-            if (video.paused) {
-                video.muted = false;
-                video.play();
-                overlay.classList.add('hidden');
-            } else {
-                video.pause();
-                overlay.classList.remove('hidden');
-            }
-        }
-
-        video.addEventListener('play', () => {
-            overlay.classList.add('hidden');
-            if (playIcon) playIcon.className = 'fa-solid fa-pause';
-            if (playText) playText.textContent = 'Pausar';
-        });
-
-        video.addEventListener('pause', () => {
-            if (playIcon) playIcon.className = 'fa-solid fa-play';
-            if (playText) playText.textContent = 'Reproducir';
-        });
-
-        async function shareVideo() {
-            if (navigator.share) {
-                try {
-                    await navigator.share({
-                        title: 'Video Reynoso Inmobiliaria',
-                        text: 'Mira este video de Reynoso Inmobiliaria',
-                        url: window.location.href
-                    });
-                } catch (err) {
-                    console.log('Error compartiendo:', err);
-                }
-            } else {
-                navigator.clipboard.writeText(window.location.href);
-                alert('¡Enlace copiado al portapapeles!');
-            }
-        }
+        const video=document.getElementById('player'),overlay=document.getElementById('overlay'),topBar=document.getElementById('topBar'),bottomBar=document.getElementById('bottomBar'),playIcon=document.getElementById('playIcon'),playText=document.getElementById('playText'),soundIcon=document.getElementById('soundIcon');
+        let hideTimer;
+        function showControls(){topBar.classList.remove('hidden');bottomBar.classList.remove('hidden');clearTimeout(hideTimer);hideTimer=setTimeout(()=>{if(!video.paused){topBar.classList.add('hidden');bottomBar.classList.add('hidden');}},3500);}
+        document.addEventListener('click',()=>{if(overlay.classList.contains('hidden'))showControls();});
+        window.addEventListener('DOMContentLoaded',()=>{video.muted=true;video.play().then(()=>{overlay.classList.add('hidden');showControls();}).catch(()=>{});});
+        function startWithSound(){video.muted=false;soundIcon.className='fa-solid fa-volume-high';video.play();overlay.classList.add('hidden');showControls();}
+        function togglePlay(){video.paused?video.play():video.pause();}
+        video.addEventListener('play',()=>{playIcon.className='fa-solid fa-pause';playText.textContent=' Pausar';});
+        video.addEventListener('pause',()=>{playIcon.className='fa-solid fa-play';playText.textContent=' Reproducir';showControls();});
+        function toggleSound(){video.muted=!video.muted;soundIcon.className=video.muted?'fa-solid fa-volume-xmark':'fa-solid fa-volume-high';}
+        async function shareVideo(){const url=window.location.href.split('?')[0];if(navigator.share){try{await navigator.share({title:'Video Reynoso Inmobiliaria',text:'Mira este video de Reynoso Inmobiliaria',url});}catch(e){}}else{navigator.clipboard.writeText(url);alert('¡Enlace copiado!');}}
     </script>
 </body>
 </html>
