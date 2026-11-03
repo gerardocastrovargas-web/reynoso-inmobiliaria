@@ -165,10 +165,10 @@
                 <!-- Botones de Pestañas / Filtros -->
                 <div class="flex flex-wrap items-center justify-center gap-2 w-full md:w-auto">
                     <button onclick="filterProperties('todos')" id="filter-todos" class="filter-btn filter-btn-active px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider border border-gray-200 transition-all">
-                        Todos (<span id="count-todos">14</span>)
+                        Todos (<span id="count-todos">15</span>)
                     </button>
                     <button onclick="filterProperties('disponible')" id="filter-disponible" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
-                        🟢 Disponibles (<span id="count-disponible">10</span>)
+                        🟢 Disponibles (<span id="count-disponible">11</span>)
                     </button>
                     <button onclick="filterProperties('vendida')" id="filter-vendida" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
                         🏷️ Vendidas (<span id="count-vendida">4</span>)
@@ -518,6 +518,58 @@
                         </div>
 
                         <button onclick="openPropertyModal('Terreno en Esquina – Conjunto Urbano Esperanza', '$1,400,000 MXN', '360 m² Superficie • Terreno en Esquina • Frente a Estacionamiento (50 autos)', 'Conjunto Urbano Esperanza, Mexicali', ['esperanza_terreno.jpg'], '🏡 TERRENO EN VENTA – CONJUNTO URBANO ESPERANZA\n\nExcelente oportunidad de inversión en terreno en esquina, con gran potencial para desarrollar distintos proyectos.\n\n📐 Superficie y Precio:\n• 💰 Precio de venta: $1,400,000 MXN\n• 📐 Superficie: 360 m²\n• 📍 Ubicación: Conjunto Urbano Esperanza, Mexicali, B.C.\n\n✨ Ideal para:\n• Parque o salón para eventos\n• Construcción de vivienda con amplio excedente de terreno\n• Proyecto con área comercial o negocio complementario\n\n🚗 Gran ventaja:\n• Frente al terreno se encuentra un área de estacionamiento con capacidad aproximada para 50 vehículos.\n\n🌟 Una propiedad con excelente ubicación, amplitud y posibilidades de aprovechamiento.\n\n📲 Informes: 661 331 0194\nReynoso & Asociados | Mexicali Home')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                            <span>Ver Más y Galería</span>
+                            <i class="fa-solid fa-images text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 3 Terrenos en Venta – Zona Dorada -->
+                <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="industrial" data-search="3 terrenos en venta zona dorada privada camile camille lotes 200 m2 mexicali inversion">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                        <img src="zona_dorada_terrenos.jpg" alt="3 Terrenos en Venta Área Zona Dorada Detrás de Privada Camile Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                            ZONA DORADA
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 1 Foto
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                3 Terrenos en Venta – Zona Dorada
+                            </h3>
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                <span>Detrás de Privada Camile, Zona Dorada</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
+                                    <span>200 m² c/u</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-layer-group text-brand-gold"></i>
+                                    <span>3 Lotes Disponibles</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-file-contract text-brand-gold"></i>
+                                    <span>Inscritos en RPP</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-circle-check text-brand-gold"></i>
+                                    <span>Libres de Gravamen</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                $400,000 <span class="text-xs font-sans font-semibold text-gray-500">MXN · por terreno</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openPropertyModal('3 Terrenos en Venta – Zona Dorada', '$400,000 MXN c/u', '200 m² cada terreno • 3 Lotes Disponibles • Inscritos en RPP', 'Detrás de Privada Camile, Área Zona Dorada, Mexicali', ['zona_dorada_terrenos.jpg'], '🏡✨ 3 TERRENOS EN VENTA – ZONA DORADA ✨🏡\n\nExcelente oportunidad para invertir en una zona con alta plusvalía y crecimiento, ubicada detrás de Privada Camile.\n\n📐 Superficie y Precio:\n• 📐 Superficie: 200 m² cada terreno\n• 💰 Precio: $400,000 MXN por terreno\n\n✅ Características:\n• ✅ 3 terrenos disponibles (Lotes 1, 2 y 3)\n• ✅ Libres de gravamen\n• ✅ Inscritos en RPP\n• ✅ Listos para escrituración ante notaría\n• ✅ Pago de contado\n• ✅ Ubicación con gran potencial de desarrollo\n\n📍 Una excelente opción para quienes buscan invertir hoy pensando en el crecimiento de la zona.\n\n📲 Informes y citas: 661 331 0194\nReynoso & Asociados | Mexicali Home')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
                             <span>Ver Más y Galería</span>
                             <i class="fa-solid fa-images text-xs"></i>
                         </button>
