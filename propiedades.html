@@ -165,10 +165,10 @@
                 <!-- Botones de Pestañas / Filtros -->
                 <div class="flex flex-wrap items-center justify-center gap-2 w-full md:w-auto">
                     <button onclick="filterProperties('todos')" id="filter-todos" class="filter-btn filter-btn-active px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider border border-gray-200 transition-all">
-                        Todos (<span id="count-todos">12</span>)
+                        Todos (<span id="count-todos">13</span>)
                     </button>
                     <button onclick="filterProperties('disponible')" id="filter-disponible" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
-                        🟢 Disponibles (<span id="count-disponible">8</span>)
+                        🟢 Disponibles (<span id="count-disponible">9</span>)
                     </button>
                     <button onclick="filterProperties('vendida')" id="filter-vendida" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
                         🏷️ Vendidas (<span id="count-vendida">4</span>)
@@ -327,7 +327,59 @@
                     </div>
                 </div>
 
-                <!-- 3. Residencia Villafontana -->
+                <!-- 3. Casa en Esquina – Col. Compuertas -->
+                <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="residencial" data-search="casa en esquina colonia compuertas av ecuador sanson flores colegio de las americas mexicali">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                        <img src="compuertas_anuncio.jpg" alt="Casa en Esquina en Venta en Colonia Compuertas Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                            EN ESQUINA
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 5 Fotos
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                Casa en Esquina – Col. Compuertas
+                            </h3>
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                <span>Av. Ecuador #499, Col. Compuertas</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
+                                    <span>331.44 m² Terreno</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-house text-brand-gold"></i>
+                                    <span>120 m² Const.</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bed text-brand-gold"></i>
+                                    <span>2 Rec. + Cuarto TV</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-school text-brand-gold"></i>
+                                    <span>Junto a Col. Américas</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                $3,900,000 <span class="text-xs font-sans font-semibold text-gray-500">MXN</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openPropertyModal('Casa en Esquina – Colonia Compuertas', '$3,900,000 MXN', '331.44 m² Terreno • 120 m² Construcción • 2 Recámaras', 'Av. Ecuador esq. Sansón Flores #499, Col. Compuertas, Mexicali', ['compuertas_anuncio.jpg', 'compuertas_entrada.jpg', 'compuertas_cochera.jpg', 'compuertas_jardin.jpg', 'compuertas_bano.jpg'], '🏡 ¡CASA EN ESQUINA EN VENTA EN COLONIA COMPUERTAS!\n\nUn amplio terreno y espacios versátiles para crear tu próximo hogar o darle forma a ese proyecto que tienes en mente. ✨\n\n📍 Ubicación:\n• Av. Ecuador esquina con Sansón Flores #499, colonia Compuertas, Mexicali.\n• 🏫 A una cuadra del Colegio de las Américas.\n\n📐 Superficie y Precio:\n• 💰 Precio de venta: $3,900,000 MXN\n• 📐 Terreno: 331.44 m²\n• 🏠 Construcción: 120 m²\n\n✅ La propiedad cuenta con:\n• 🔹 2 recámaras\n• 🔹 Sala, comedor y cocina\n• 🔹 Un cuarto adicional para servicio o sala de TV\n• 🔹 Patio posterior con tejabán\n• 🔹 Cuarto de almacén con medio baño\n\n🌟 Su ubicación en esquina y distribución ofrecen distintas posibilidades para aprovechar cada espacio según tus necesidades.\n\n📲 ¡Agenda tu visita y conoce sus posibilidades!\nEnvíanos un mensaje o comunícate al 661 331 0194.\nReynoso & Asociados | Mexicali Home')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                            <span>Ver Más y Galería</span>
+                            <i class="fa-solid fa-images text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. Residencia Villafontana -->
                 <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="residencial" data-search="residencia villafontana casa mexicali">
                     <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
                         <img src="villafontana_facade.jpg" alt="Residencia en Fracc. Villafontana Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
@@ -801,7 +853,13 @@
                     </div>
                     <div id="modal-price" class="text-2xl font-serif font-extrabold text-brand-gold"></div>
                 </div>
-                <p id="modal-desc" class="text-sm text-gray-600 leading-relaxed"></p>
+                <div class="flex items-center gap-6 py-2.5 border-b border-gray-100 text-sm font-semibold text-gray-700">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
+                        <span id="modal-area"></span>
+                    </div>
+                </div>
+                <p id="modal-desc" style="white-space: pre-line;" class="text-sm text-gray-700 leading-relaxed whitespace-pre-line bg-brand-cream/60 p-4 rounded-xl border border-brand-gold/15"></p>
                 <div class="pt-4 flex flex-col sm:flex-row gap-3">
                     <a id="modal-wa-btn" href="#" target="_blank" class="flex-1 py-3 bg-brand-whatsapp text-white text-center font-bold text-sm rounded-md shadow hover:bg-emerald-600 flex items-center justify-center gap-2">
                         <i class="fa-brands fa-whatsapp text-lg"></i><span>Solicitar Informes por WhatsApp</span>
@@ -887,6 +945,9 @@
         function openPropertyModal(title, price, area, location, images, desc) {
             document.getElementById('modal-title').textContent = title;
             document.getElementById('modal-price').textContent = price;
+            if (document.getElementById('modal-area')) {
+                document.getElementById('modal-area').textContent = area;
+            }
             document.getElementById('modal-location').querySelector('span').textContent = location;
             document.getElementById('modal-desc').textContent = desc;
 
