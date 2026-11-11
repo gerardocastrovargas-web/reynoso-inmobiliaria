@@ -165,10 +165,10 @@
                 <!-- Botones de Pestañas / Filtros -->
                 <div class="flex flex-wrap items-center justify-center gap-2 w-full md:w-auto">
                     <button onclick="filterProperties('todos')" id="filter-todos" class="filter-btn filter-btn-active px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider border border-gray-200 transition-all">
-                        Todos (<span id="count-todos">15</span>)
+                        Todos (<span id="count-todos">17</span>)
                     </button>
                     <button onclick="filterProperties('disponible')" id="filter-disponible" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
-                        🟢 Disponibles (<span id="count-disponible">11</span>)
+                        🟢 Disponibles (<span id="count-disponible">13</span>)
                     </button>
                     <button onclick="filterProperties('vendida')" id="filter-vendida" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
                         🏷️ Vendidas (<span id="count-vendida">4</span>)
@@ -373,6 +373,110 @@
                         </div>
 
                         <button onclick="openPropertyModal('Casa en Esquina – Colonia Compuertas', '$3,900,000 MXN', '331.44 m² Terreno • 120 m² Construcción • 2 Recámaras', 'Av. Ecuador esq. Sansón Flores #499, Col. Compuertas, Mexicali', ['compuertas_anuncio.jpg', 'compuertas_fachada.jpg', 'compuertas_entrada.jpg', 'compuertas_cochera.jpg', 'compuertas_jardin.jpg', 'compuertas_patio.jpg', 'compuertas_sala_comedor.jpg', 'compuertas_bano.jpg'], '🏡 ¡CASA EN ESQUINA EN VENTA EN COLONIA COMPUERTAS!\n\nUn amplio terreno y espacios versátiles para crear tu próximo hogar o darle forma a ese proyecto que tienes en mente. ✨\n\n📍 Ubicación:\n• Av. Ecuador esquina con Sansón Flores #499, colonia Compuertas, Mexicali.\n• 🏫 A una cuadra del Colegio de las Américas.\n\n📐 Superficie y Precio:\n• 💰 Precio de venta: $3,900,000 MXN\n• 📐 Terreno: 331.44 m²\n• 🏠 Construcción: 120 m²\n\n✅ La propiedad cuenta con:\n• 🔹 2 recámaras\n• 🔹 Sala, comedor y cocina\n• 🔹 Un cuarto adicional para servicio o sala de TV\n• 🔹 Patio posterior con tejabán\n• 🔹 Cuarto de almacén con medio baño\n\n🌟 Su ubicación en esquina y distribución ofrecen distintas posibilidades para aprovechar cada espacio según tus necesidades.\n\n📲 ¡Agenda tu visita y conoce sus posibilidades!\nEnvíanos un mensaje o comunícate al 661 331 0194.\nReynoso & Asociados | Mexicali Home')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                            <span>Ver Más y Galería</span>
+                            <i class="fa-solid fa-images text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Casa en Venta – Laguna Campestre (Club Campestre) -->
+                <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="residencial" data-search="casa en venta club campestre laguna campestre av lago toronto 500 mexicali">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                        <img src="campestre_anuncio.jpg" alt="Casa en Venta en Club Campestre Laguna Campestre Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                            RESIDENCIAL
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 7 Fotos
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                Casa – Laguna Campestre
+                            </h3>
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                <span>Av. Lago Toronto #500, Laguna Campestre</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
+                                    <span>375 m² Terreno</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-house text-brand-gold"></i>
+                                    <span>163.40 m² Const.</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bed text-brand-gold"></i>
+                                    <span>3 Recámaras • 1 Nivel</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-car text-brand-gold"></i>
+                                    <span>3 Vehículos</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                $4,511,100 <span class="text-xs font-sans font-semibold text-gray-500">MXN</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openPropertyModal('Casa en Venta – Club Campestre (Laguna Campestre)', '$4,511,100 MXN', '375 m² Terreno • 163.40 m² Const. • 3 Recámaras • 1 Nivel', 'Av. Lago Toronto #500, Laguna Campestre, Mexicali', ['campestre_anuncio.jpg', 'campestre_fachada.jpg', 'campestre_exterior.jpg', 'campestre_recibidor.jpg', 'campestre_sala.jpg', 'campestre_cocina.jpg', 'campestre_ubicacion.jpg'], '🏡✨ CASA EN VENTA EN CLUB CAMPESTRE ✨🏡\n\nSi buscas una propiedad con excelente ubicación, amplios espacios y gran potencial, esta opción en Laguna Campestre puede ser para ti.\n\n📍 Ubicación: Av. Lago Toronto #500, Laguna Campestre, Mexicali\n💰 Precio: $4,511,100 MXN\n\n🏠 Características:\n• ✅ 375 m² de terreno\n• ✅ 163.40 m² de construcción\n• ✅ 3 recámaras\n• ✅ 1 nivel\n• ✅ Espacio para 3 vehículos\n• ✅ Área de recibidor\n• ✅ Sala amplia y cómoda\n• ✅ Cocina equipada\n• ✅ Propiedad con excelente distribución y espacios funcionales\n\n🌟 Una muy buena oportunidad para quienes buscan una casa con terreno amplio, buena presencia y ubicación en una zona residencial de Mexicali.\n\n📲 Informes y citas por WhatsApp: 661 331 0194\nReynoso & Asociados | Mexicali Home')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                            <span>Ver Más y Galería</span>
+                            <i class="fa-solid fa-images text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Casa en Esquina – Urbi Quinta Granada -->
+                <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="residencial" data-search="casa en esquina urbi quinta granada mexicali terreno excedente privado">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                        <img src="urbi_granada_anuncio.jpg" alt="Casa en Venta en Urbi Quinta Granada Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                            EN ESQUINA
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 1 Foto
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                Casa en Esquina – Urbi Quinta Granada
+                            </h3>
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                <span>Fracc. Privado Urbi Quinta Granada</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
+                                    <span>146 m² Terreno</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-house text-brand-gold"></i>
+                                    <span>70 m² Const.</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-layer-group text-brand-gold"></i>
+                                    <span>2 Niveles • 1.5 Baños</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-shield-halved text-brand-gold"></i>
+                                    <span>Acceso Controlado</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 text-xl font-extrabold text-brand-gold font-serif">
+                                $1,850,000 <span class="text-xs font-sans font-semibold text-gray-500">MXN</span>
+                            </div>
+                        </div>
+
+                        <button onclick="openPropertyModal('Casa en Esquina – Urbi Quinta Granada', '$1,850,000 MXN', '146 m² Terreno • 70 m² Const. • 2 Niveles • 1.5 Baños • Terreno Excedente', 'Urbi Quinta Granada, Mexicali, B.C.', ['urbi_granada_anuncio.jpg'], '🏡✨ ¡CASA EN VENTA EN URBI QUINTA GRANADA!\n📍 Mexicali, Baja California\n\n¡Una excelente oportunidad para estrenar una nueva etapa en tu hogar! 🔑\nHermosa casa de dos niveles, ubicada en esquina y con terreno excedente, dentro del fraccionamiento privado Urbi Quinta Granada.\n\n💰 PRECIO: $1,850,000 MXN\n\n🏠 CARACTERÍSTICAS:\n• ✅ 146 m² de terreno\n• ✅ 70 m² de construcción\n• ✅ Casa de 2 niveles\n• ✅ 1.5 baños\n• ✅ Terreno excedente\n• ✅ Pisos de loseta\n• ✅ Totalmente rehabilitada\n\n🌳 AMENIDADES DEL FRACCIONAMIENTO:\n• 🔐 Acceso controlado\n• 🛡️ Caseta de seguridad\n• 🌳 Parque central\n\n🌟 Una propiedad ideal para quienes buscan comodidad, privacidad y espacio adicional dentro de un fraccionamiento residencial.\n\n📲 Informes y citas por WhatsApp: 661 331 0194\nReynoso & Asociados | Mexicali Home')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
                             <span>Ver Más y Galería</span>
                             <i class="fa-solid fa-images text-xs"></i>
                         </button>
