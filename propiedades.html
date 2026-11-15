@@ -165,10 +165,10 @@
                 <!-- Botones de Pestañas / Filtros -->
                 <div class="flex flex-wrap items-center justify-center gap-2 w-full md:w-auto">
                     <button onclick="filterProperties('todos')" id="filter-todos" class="filter-btn filter-btn-active px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider border border-gray-200 transition-all">
-                        Todos (<span id="count-todos">17</span>)
+                        Todos (<span id="count-todos">18</span>)
                     </button>
                     <button onclick="filterProperties('disponible')" id="filter-disponible" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
-                        🟢 Disponibles (<span id="count-disponible">13</span>)
+                        🟢 Disponibles (<span id="count-disponible">14</span>)
                     </button>
                     <button onclick="filterProperties('vendida')" id="filter-vendida" class="filter-btn px-4 py-2 rounded-lg text-xs font-bold uppercase tracking-wider bg-white text-gray-700 hover:border-brand-gold border border-gray-200 transition-all">
                         🏷️ Vendidas (<span id="count-vendida">4</span>)
@@ -185,7 +185,64 @@
             <!-- GRID DE PROPIEDADES -->
             <div id="properties-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                 
-                <!-- 1. Corceles Residencial -->
+                <!-- 1. 17 Hectáreas – Ejido Oaxaca (Valle de Mexicali) -->
+                <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="industrial" data-search="17 hectareas en venta valle de mexicali ejido oaxaca rancho agricola parcela">
+                    <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                        <img src="oaxaca_anuncio.jpg" alt="17 Hectáreas en Venta en Ejido Oaxaca Valle de Mexicali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <span class="absolute top-3 right-3 bg-brand-gold text-white text-xs font-bold uppercase px-3 py-1 rounded-md shadow-md tracking-wider">
+                            INVERSIÓN
+                        </span>
+                        <span class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-full flex items-center gap-1">
+                            <i class="fa-solid fa-camera text-brand-gold text-xs"></i> 5 Fotos
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow justify-between">
+                        <div>
+                            <h3 class="font-serif font-bold text-lg text-brand-green group-hover:text-brand-gold transition-colors line-clamp-1">
+                                17 Hectáreas – Valle de Mexicali
+                            </h3>
+                            <div class="flex items-center gap-1.5 text-xs font-medium text-gray-500 mt-2">
+                                <i class="fa-solid fa-location-dot text-brand-gold"></i>
+                                <span>Ejido Oaxaca, Valle de Mexicali</span>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-2 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600 font-semibold">
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-ruler-combined text-brand-gold"></i>
+                                    <span>17 Ha (170,000 m²)</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-file-shield text-brand-gold"></i>
+                                    <span>Propiedad Privada</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-water text-brand-gold"></i>
+                                    <span>Canales de Riego</span>
+                                </div>
+                                <div class="flex items-center gap-1.5">
+                                    <i class="fa-solid fa-bolt text-brand-gold"></i>
+                                    <span>Energía Cercana</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-4 flex flex-col">
+                                <div class="text-xl font-extrabold text-brand-gold font-serif">
+                                    $5,000,000 <span class="text-xs font-sans font-semibold text-gray-500">MXN</span>
+                                </div>
+                                <span class="text-[11px] font-semibold text-brand-green mt-0.5">
+                                    🔥 Solo $294,118 MXN por hectárea
+                                </span>
+                            </div>
+                        </div>
+
+                        <button onclick="openPropertyModal('17 Hectáreas en Venta – Ejido Oaxaca (Valle de Mexicali)', '$5,000,000 MXN ($294,118 / Ha)', '17 Hectáreas (170,000 m²) • Propiedad Privada • Uso Agrícola / Campestre', 'Ejido Oaxaca, Valle de Mexicali, B.C.', ['oaxaca_anuncio.jpg', 'oaxaca_parcela.jpg', 'oaxaca_camino.jpg', 'oaxaca_canal1.jpg', 'oaxaca_canal2.jpg'], '🌾🏡 ¡17 HECTÁREAS EN VENTA EN EL VALLE DE MEXICALI! 🌿\n📍 Ejido Oaxaca, Mexicali, Baja California\n\n💰 PRECIO: $5,000,000 MXN\n🔥 ¡Equivalente a solo $294,118 MXN por hectárea!\n\n¿Buscas invertir en tierra, desarrollar tu propio rancho o ampliar tus actividades agrícolas? Esta propiedad representa una excelente oportunidad por su extensión, ubicación y potencial de aprovechamiento.\n\n📐 CARACTERÍSTICAS DE LA PROPIEDAD:\n• ✅ 17 hectáreas de superficie (170,000 m²)\n• ✅ Propiedad privada\n• ✅ Ubicada en el corazón del Valle de Mexicali\n• ✅ Acceso por camino de terracería\n• ✅ Canales de riego en las inmediaciones\n• ✅ Infraestructura eléctrica cercana\n• ✅ Entorno agrícola y amplios espacios naturales\n\n🌱 ¡UN TERRENO CON MÚLTIPLES POSIBILIDADES!\n• 🚜 Actividades agrícolas y producción de cultivos\n• 🐄 Proyectos ganaderos\n• 🏡 Desarrollo de rancho o propiedad campestre\n• 🏗️ Proyectos agroindustriales\n• 📈 Inversión patrimonial a largo plazo\n*(Los proyectos están sujetos a la factibilidad, permisos y autorizaciones correspondientes)*\n\n📍 UBICACIÓN ESTRATÉGICA:\nSituada en la zona del Ejido Oaxaca, cerca de la conexión hacia Guadalupe Victoria, esta parcela combina la tranquilidad del entorno rural con acceso a las vialidades del Valle de Mexicali.\n\n📲 Informes y citas por WhatsApp: 661 331 0194\nReynoso & Asociados | Mexicali Home')" class="mt-5 w-full py-2.5 rounded-md bg-brand-gold text-white font-semibold text-sm shadow hover:bg-brand-goldHover transition-all text-center flex items-center justify-center gap-2">
+                            <span>Ver Más y Galería</span>
+                            <i class="fa-solid fa-images text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2. Corceles Residencial -->
                 <div class="property-card bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 hover:shadow-card-hover transition-all flex flex-col group" data-status="disponible" data-type="residencial" data-search="corceles residencial casa alberca mexicali">
                     <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
                         <img src="corceles_anuncio.jpg" alt="Corceles Residencial - Residencia Privada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
